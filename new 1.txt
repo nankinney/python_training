@@ -1,0 +1,3326 @@
+Microsoft Windows [Version 10.0.17763.107]
+(c) 2018 Microsoft Corporation. All rights reserved.
+
+C:\Users\ansadm>cd \labs
+
+C:\labs>start/b pythonlab30a.py
+
+C:\labs>netstat -ano | find/i "31200"
+  TCP    127.0.0.1:31200        0.0.0.0:0              LISTENING       5156
+
+C:\labs>curl -v telnet://localhost:31200
+* Rebuilt URL to: telnet://localhost:31200/
+*   Trying ::1...
+* TCP_NODELAY set
+*   Trying 127.0.0.1...
+* TCP_NODELAY set
+* request from:  ('127.0.0.1', 50651)
+Connected to localhost (127.0.0.1) port 31200 (#0)
+
+:q
+Traceback (most recent call last):
+  File "C:\labs\pythonlab30a.py", line 23, in <module>
+    func()
+  File "C:\labs\pythonlab30a.py", line 14, in func
+^    data = clientsock.recv(1024)
+           ^^^^^^^^^^^^^^^^^^^^^
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+
+C:\labs>
+
+C:\labs>start/b pythonlab30a.py
+
+C:\labs>netstat -ano | find/i "31200"
+  TCP    127.0.0.1:31200        0.0.0.0:0              LISTENING       6312
+
+C:\labs>start/b pythonlab31a.py
+
+C:\labs>request from:  ('127.0.0.1', 50729)
+server - data from client:  sample message from client connection
+Traceback (most recent call last):
+  File "C:\labs\pythonlab30a.py", line 23, in <module>
+    func()
+  File "C:\labs\pythonlab30a.py", line 14, in func
+    data = clientsock.recv(1024)
+           ^^^^^^^^^^^^^^^^^^^^^
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+
+C:\labs>start/b pythonlab30.py
+
+C:\labs>python -qi
+>>> quit()
+
+C:\labs>pydoc3 multiprocessing.Process
+Help on class Process in multiprocessing:
+
+multiprocessing.Process = class Process(multiprocessing.process.BaseProcess)
+ |  multiprocessing.Process(group=None, target=None, name=None, args=(), kwargs={}, *, daemon=None)
+ |
+ |  Method resolution order:
+ |      Process
+ |      multiprocessing.process.BaseProcess
+ |      builtins.object
+ |
+ |  Methods inherited from multiprocessing.process.BaseProcess:
+ |
+ |  __init__(self, group=None, target=None, name=None, args=(), kwargs={}, *, daemon=None)
+ |      Initialize self.  See help(type(self)) for accurate signature.
+ |
+ |  __repr__(self)
+ |      Return repr(self).
+ |
+ |  close(self)
+ |      Close the Process object.
+ |
+ |      This method releases resources held by the Process object.  It is
+ |      an error to call this method if the child process is still running.
+ |
+ |  is_alive(self)
+ |      Return whether process is alive
+ |
+ |  join(self, timeout=None)
+
+
+C:\labs>copy \advpython\advsamples\advpython54.py
+Overwrite C:\labs\advpython54.py? (Yes/No/All): Y
+        1 file(s) copied.
+
+C:\labs>start notepad++ advpython54.py
+
+C:\labs>advpython54.py
+parent process: (id 2680)
+parent process: after child process start
+parent process: about to join child process
+child process: (id 7408)
+child process: sleeping for 5 seconds
+child process: done sleeping
+parent process: child process finished
+parent process: exiting
+
+C:\labs>copy \advpython\distributions\timethis_setu.exe
+The system cannot find the file specified.
+
+C:\labs>copy \advpython\distributions\timethis_setup.exe
+        1 file(s) copied.
+
+C:\labs> \advpython\distributions\timethis_setup.exe
+
+C:\labs>dir
+ Volume in drive C has no label.
+ Volume Serial Number is 60AE-64CF
+
+ Directory of C:\labs
+
+11/29/2023  02:00 PM    <DIR>          .
+11/29/2023  02:00 PM    <DIR>          ..
+11/28/2023  03:14 PM            21,975 .pylintrc
+07/10/2023  10:28 AM               292 advpython1.py
+11/15/2023  09:24 AM               538 advpython10.py
+07/10/2023  11:36 AM               222 advpython10_1.py
+09/05/2017  02:10 PM               213 advpython11.py
+07/10/2023  11:54 AM               386 advpython12.py
+11/29/2023  09:47 AM               378 advpython13.py
+07/10/2023  12:55 PM               236 advpython18.py
+07/10/2023  12:55 PM               178 advpython19.py
+07/10/2023  10:28 AM               182 advpython2.py
+07/10/2023  12:59 PM               357 advpython20.py
+09/06/2017  04:51 PM               494 advpython21.py
+07/10/2023  01:09 PM               389 advpython22.py
+07/10/2023  01:12 PM               462 advpython23.py
+07/10/2023  01:12 PM               710 advpython24.py
+07/10/2023  01:15 PM               640 advpython25.py
+07/10/2023  01:17 PM               226 advpython27.py
+07/10/2023  01:33 PM               250 advpython28.py
+11/28/2023  11:43 AM               313 advpython3.py
+07/10/2023  02:00 PM               241 advpython33.py
+07/10/2023  02:14 PM               145 advpython34.py
+07/10/2023  02:15 PM               145 advpython35.py
+07/10/2023  02:17 PM               173 advpython36.py
+07/10/2023  02:19 PM               371 advpython37.py
+07/10/2023  02:22 PM               556 advpython37_1.py
+07/10/2023  02:23 PM               301 advpython38.py
+07/10/2023  02:24 PM               129 advpython39.py
+07/10/2023  10:53 AM               490 advpython4.py
+07/10/2023  02:24 PM               237 advpython40.py
+07/10/2023  02:24 PM               332 advpython41.py
+07/10/2023  02:24 PM               340 advpython42.py
+07/10/2023  02:25 PM               246 advpython43.py
+07/10/2023  02:25 PM               340 advpython44.py
+07/10/2023  02:26 PM               476 advpython45.py
+07/10/2023  02:26 PM               286 advpython46.py
+07/10/2023  02:27 PM               161 advpython47.py
+07/10/2023  02:27 PM               141 advpython48.py
+07/10/2023  08:43 PM               362 advpython49.py
+07/10/2023  08:44 PM               448 advpython49a.py
+07/10/2023  10:56 AM               436 advpython5.py
+07/10/2023  08:48 PM               489 advpython50.py
+07/11/2023  01:52 PM               271 advpython51.py
+07/10/2023  09:12 PM               283 advpython51a.py
+07/10/2023  09:12 PM               279 advpython51b.py
+07/10/2023  09:33 PM               343 advpython52.py
+07/10/2023  09:52 PM               216 advpython53.py
+07/10/2023  09:59 PM               647 advpython54.py
+07/10/2023  10:01 PM               281 advpython56.py
+07/11/2023  11:51 AM               561 advpython58.py
+07/11/2023  11:51 AM               611 advpython59.py
+07/10/2023  10:55 AM               327 advpython6.py
+07/11/2023  11:55 AM               642 advpython60.py
+07/11/2023  12:03 PM               680 advpython61.py
+07/11/2023  12:04 PM               597 advpython62.py
+07/11/2023  12:08 PM               549 advpython63.py
+07/11/2023  12:26 PM               236 advpython66.py
+07/11/2023  12:25 PM               227 advpython67.py
+07/11/2023  01:49 PM               153 advpython68.py
+07/10/2023  11:02 AM               326 advpython7.py
+07/10/2023  09:18 PM               607 advpython70.py
+07/10/2023  09:20 PM               660 advpython71.py
+07/10/2023  11:31 AM               160 advpython8.py
+11/28/2023  04:13 PM               217 advpython9.py
+07/10/2023  11:53 AM               411 advpythonlab1.py
+11/28/2023  04:31 PM               295 advpythonlab2a.py
+11/17/2023  10:54 AM               382 advpythonlab2_windows.py
+11/28/2023  02:03 PM               243 anything.py
+11/04/2022  09:02 AM            15,360 cat.exe
+01/02/2022  06:42 PM               231 client.py
+11/28/2023  02:15 PM             1,545 docstrings.html
+07/17/2023  05:22 PM               179 docstrings.py
+11/28/2023  02:10 PM               247 docstrings_1.py
+11/17/2023  10:56 AM            17,408 egrep.exe
+11/13/2023  10:26 AM           135,680 grep.exe
+11/01/2023  12:51 PM               112 interpreted_1.py
+11/01/2022  09:08 PM               151 interpreted_2.py
+09/05/2017  12:45 PM                57 names.dat
+07/10/2023  11:18 AM            95,387 os.html
+11/28/2023  10:18 AM               208 python.sample.py
+11/29/2023  09:57 AM               867 python10.py
+07/10/2023  10:58 AM               324 python7.py
+11/29/2023  12:19 PM               493 pythonlab30.py
+11/29/2023  12:29 PM               493 pythonlab30a.py
+04/19/2022  06:28 PM               400 pythonlab31.py
+01/02/2022  06:42 PM               231 pythonlab31a.py
+11/29/2023  10:39 AM               408 pythonlab4.py
+11/06/2022  06:16 PM            49,152 sed.exe
+01/02/2022  06:02 PM               361 server.py
+07/10/2023  11:18 AM            26,383 sys.html
+11/17/2023  10:51 AM            35,328 tail.exe
+11/28/2023  10:13 AM            11,433 timedoc.txt
+11/06/2022  08:53 PM               252 times.py
+11/29/2023  09:28 AM               374 times2.py
+03/10/2015  08:37 AM           118,512 timethis_setup.exe
+06/28/2022  06:30 AM         3,044,352 vim.exe
+04/28/2014  04:44 PM         1,025,728 vmmap.exe
+11/04/2022  09:03 AM            29,696 wc.exe
+11/13/2023  10:27 AM           104,448 win32gnu.dll
+11/28/2023  04:29 PM    <DIR>          __pycache__
+              98 File(s)      4,761,290 bytes
+               3 Dir(s)  32,911,175,680 bytes free
+
+C:\labs>copy \advpython\advsamples\advpython56.py
+Overwrite C:\labs\advpython56.py? (Yes/No/All): Y
+        1 file(s) copied.
+
+C:\labs>start notepad++ advpython56.py
+
+C:\labs>timethis dir/b
+
+TimeThis :  Command Line :  dir/b
+TimeThis :    Start Time :  Wed Nov 29 14:06:42 2023
+
+.pylintrc
+advpython1.py
+advpython10.py
+advpython10_1.py
+advpython11.py
+advpython12.py
+advpython13.py
+advpython18.py
+advpython19.py
+advpython2.py
+advpython20.py
+advpython21.py
+advpython22.py
+advpython23.py
+advpython24.py
+advpython25.py
+advpython27.py
+advpython28.py
+advpython3.py
+advpython33.py
+advpython34.py
+advpython35.py
+advpython36.py
+advpython37.py
+advpython37_1.py
+advpython38.py
+advpython39.py
+advpython4.py
+advpython40.py
+advpython41.py
+advpython42.py
+advpython43.py
+advpython44.py
+advpython45.py
+advpython46.py
+advpython47.py
+advpython48.py
+advpython49.py
+advpython49a.py
+advpython5.py
+advpython50.py
+advpython51.py
+advpython51a.py
+advpython51b.py
+advpython52.py
+advpython53.py
+advpython54.py
+advpython56.py
+advpython58.py
+advpython59.py
+advpython6.py
+advpython60.py
+advpython61.py
+advpython62.py
+advpython63.py
+advpython66.py
+advpython67.py
+advpython68.py
+advpython7.py
+advpython70.py
+advpython71.py
+advpython8.py
+advpython9.py
+advpythonlab1.py
+advpythonlab2a.py
+advpythonlab2_windows.py
+anything.py
+cat.exe
+client.py
+docstrings.html
+docstrings.py
+docstrings_1.py
+egrep.exe
+grep.exe
+interpreted_1.py
+interpreted_2.py
+names.dat
+os.html
+python.sample.py
+python10.py
+python7.py
+pythonlab30.py
+pythonlab30a.py
+pythonlab31.py
+pythonlab31a.py
+pythonlab4.py
+sed.exe
+server.py
+sys.html
+tail.exe
+timedoc.txt
+times.py
+times2.py
+timethis_setup.exe
+vim.exe
+vmmap.exe
+wc.exe
+win32gnu.dll
+__pycache__
+
+TimeThis :  Command Line :  dir/b
+TimeThis :    Start Time :  Wed Nov 29 14:06:42 2023
+TimeThis :      End Time :  Wed Nov 29 14:06:42 2023
+TimeThis :  Elapsed Time :  00:00:00.109
+
+C:\labs>timethis dir/b
+
+TimeThis :  Command Line :  dir/b
+TimeThis :    Start Time :  Wed Nov 29 14:07:34 2023
+
+.pylintrc
+advpython1.py
+advpython10.py
+advpython10_1.py
+advpython11.py
+advpython12.py
+advpython13.py
+advpython18.py
+advpython19.py
+advpython2.py
+advpython20.py
+advpython21.py
+advpython22.py
+advpython23.py
+advpython24.py
+advpython25.py
+advpython27.py
+advpython28.py
+advpython3.py
+advpython33.py
+advpython34.py
+advpython35.py
+advpython36.py
+advpython37.py
+advpython37_1.py
+advpython38.py
+advpython39.py
+advpython4.py
+advpython40.py
+advpython41.py
+advpython42.py
+advpython43.py
+advpython44.py
+advpython45.py
+advpython46.py
+advpython47.py
+advpython48.py
+advpython49.py
+advpython49a.py
+advpython5.py
+advpython50.py
+advpython51.py
+advpython51a.py
+advpython51b.py
+advpython52.py
+advpython53.py
+advpython54.py
+advpython56.py
+advpython58.py
+advpython59.py
+advpython6.py
+advpython60.py
+advpython61.py
+advpython62.py
+advpython63.py
+advpython66.py
+advpython67.py
+advpython68.py
+advpython7.py
+advpython70.py
+advpython71.py
+advpython8.py
+advpython9.py
+advpythonlab1.py
+advpythonlab2a.py
+advpythonlab2_windows.py
+anything.py
+cat.exe
+client.py
+docstrings.html
+docstrings.py
+docstrings_1.py
+egrep.exe
+grep.exe
+interpreted_1.py
+interpreted_2.py
+names.dat
+os.html
+python.sample.py
+python10.py
+python7.py
+pythonlab30.py
+pythonlab30a.py
+pythonlab31.py
+pythonlab31a.py
+pythonlab4.py
+sed.exe
+server.py
+sys.html
+tail.exe
+timedoc.txt
+times.py
+times2.py
+timethis_setup.exe
+vim.exe
+vmmap.exe
+wc.exe
+win32gnu.dll
+__pycache__
+
+TimeThis :  Command Line :  dir/b
+TimeThis :    Start Time :  Wed Nov 29 14:07:34 2023
+TimeThis :      End Time :  Wed Nov 29 14:07:34 2023
+TimeThis :  Elapsed Time :  00:00:00.109
+
+C:\labs>copy \advpython\advsamples\advpython58.py
+Overwrite C:\labs\advpython58.py? (Yes/No/All): Y
+        1 file(s) copied.
+
+C:\labs>start notepad++ advpython58.py
+
+C:\labs>start notepad++ advpython59.py
+
+C:\labs>advpython59.py
+master: pid:  6708 TID:  1792
+master: creating new thread
+new_thread: code in new thread
+master: waiting for thread to finish
+new_thread: pid: 6708 TID: 7496
+new_thread: finished
+master: back after thread has finished
+
+C:\labs>start/b pythonlab30.py
+
+C:\labs>Traceback (most recent call last):
+  File "C:\labs\pythonlab30.py", line 23, in <module>
+    func()
+  File "C:\labs\pythonlab30.py", line 9, in func
+    srvsock.bind(("localhost",31200))
+OSError: [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted
+
+C:\labs>start/b server.py
+
+C:\labs>netstat -ano | find/i "31200"
+  TCP    0.0.0.0:31200          0.0.0.0:0              LISTENING       7312
+  TCP    127.0.0.1:31200        0.0.0.0:0              LISTENING       6880
+
+C:\labs>tasklist | find/i "7312"
+python.exe                    7312 Console                    1      9,648 K
+
+C:\labs>curl -v telnet://localhost:31200
+* Rebuilt URL to: telnet://localhost:31200/
+*   Trying ::1...
+* TCP_NODELAY set
+*   Trying 127.0.0.1...
+* TCP_NODELAY set
+* request from:  ('127.0.0.1', 50800)
+Connected to localhost (127.0.0.1) port 31200 (#0)
+
+:q
+
+^C
+^C^C
+Traceback (most recent call last):
+  File "C:\labs\pythonlab30.py", line 23, in <module>
+    func()
+  File "C:\labs\pythonlab30.py", line 14, in func
+    data = clientsock.recv(6800)
+           ^^^^^^^^^^^^^^^^^^^^^
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+
+C:\labs>
+
+C:\labs>copy \advpython\advsamples\advpython6?.py
+\advpython\advsamples\advpython6.py
+Overwrite C:\labs\advpython6.py? (Yes/No/All): N
+\advpython\advsamples\advpython60.py
+Overwrite C:\labs\advpython60.py? (Yes/No/All): Y
+\advpython\advsamples\advpython61.py
+Overwrite C:\labs\advpython61.py? (Yes/No/All): Y
+\advpython\advsamples\advpython62.py
+Overwrite C:\labs\advpython62.py? (Yes/No/All): Y
+\advpython\advsamples\advpython63.py
+Overwrite C:\labs\advpython63.py? (Yes/No/All): Y
+\advpython\advsamples\advpython66.py
+Overwrite C:\labs\advpython66.py? (Yes/No/All): Y
+\advpython\advsamples\advpython67.py
+Overwrite C:\labs\advpython67.py? (Yes/No/All): Y
+\advpython\advsamples\advpython68.py
+Overwrite C:\labs\advpython68.py? (Yes/No/All): Y
+        7 file(s) copied.
+
+C:\labs>pydoc3 concurrent.futures
+Help on package concurrent.futures in concurrent:
+
+NAME
+    concurrent.futures - Execute computations asynchronously using threads or processes.
+
+MODULE REFERENCE
+    https://docs.python.org/3.11/library/concurrent.futures.html
+
+    The following documentation is automatically generated from the Python
+    source files.  It may be incomplete, incorrect or include features that
+    are considered implementation detail and may vary between Python
+    implementations.  When in doubt, consult the module reference at the
+    location listed above.
+
+PACKAGE CONTENTS
+    _base
+    process
+    thread
+
+CLASSES
+    builtins.OSError(builtins.Exception)
+        builtins.TimeoutError
+    builtins.RuntimeError(builtins.Exception)
+        concurrent.futures._base.BrokenExecutor
+    builtins.object
+        concurrent.futures._base.Executor
+
+
+C:\labs>
+C:\labs>advpython61.py
+main: starting threads
+thread1: Lock acquired 1701288736.1606367
+thread2: trying to acquire lock
+main: finished
+thread1: finished
+thread2: Lock acquired 1701288738.1707602
+thread2: finished
+
+C:\labs>advpython62.py
+thread1: waiting at barrier 1701288748.7332826
+main: finished
+thread2: waiting at barrier 1701288750.7413306
+thread2: continuing from barrier
+thread1: continuing from barrier
+
+C:\labs>copy advpython62.py advpythonlab16.py
+        1 file(s) copied.
+
+C:\labs>start notepad++ advpythonlab16.py
+
+C:\labs>advpythonlab16.py
+thread1: waiting at barrier 1701289241.1007283
+main: finished
+thread2: waiting at barrier 1701289243.1093106
+thread2: released from barrier num:  1
+thread1: released from barrier num:  0
+
+C:\labs>start notepad++ advpython63.py
+
+C:\labs>advpython63.py
+thread1: semaphore acquired 1701289752.889529
+thread2: trying to acquire semaphore
+thread2: semaphore acquired 1701289754.8985713
+
+C:\labs>copy \advpython\advsamples\multi_threading_server.py
+        1 file(s) copied.
+
+C:\labs>start/b multi_threading_server.py
+
+C:\labs>netstat -ano | find/i "31200"
+  TCP    0.0.0.0:31200          0.0.0.0:0              LISTENING       7312
+  TCP    127.0.0.1:31200        0.0.0.0:0              LISTENING       4152
+
+C:\labs>advpython66.py
+new_thread: request from:  ('127.0.0.1', 50847)
+new_thread: data from client:  sample message from client connection
+
+C:\labs>netstat -ano | find/i "31200"
+  TCP    0.0.0.0:31200          0.0.0.0:0              LISTENING       7312
+  TCP    127.0.0.1:31200        0.0.0.0:0              LISTENING       4152
+  TCP    127.0.0.1:50847        127.0.0.1:31200        TIME_WAIT       0
+
+C:\labs>netstat -ano | find "31200"
+  TCP    0.0.0.0:31200          0.0.0.0:0              LISTENING       7312
+  TCP    127.0.0.1:31200        0.0.0.0:0              LISTENING       4152
+  TCP    127.0.0.1:50847        127.0.0.1:31200        TIME_WAIT       0
+
+C:\labs>taskkill/fi "pid eq 7312" /f
+SUCCESS: The process with PID 7312 has been terminated.
+
+C:\labs>taskkill/fi "pid eq 4152" /f
+SUCCESS: The process with PID 4152 has been terminated.
+
+C:\labs>start/b multi_threading_server.py
+
+C:\labs>for /L %x in (1,1,5) do advpython66.py
+
+C:\labs>advpython66.py
+new_thread: request from:  ('127.0.0.1', 50851)
+new_thread: data from client:  sample message from client connection
+
+C:\labs>advpython66.py
+new_thread: request from:  ('127.0.0.1', 50852)
+new_thread: data from client:  sample message from client connection
+
+C:\labs>advpython66.py
+new_thread: request from:  ('127.0.0.1', 50853)
+new_thread: data from client:  sample message from client connection
+
+C:\labs>advpython66.py
+new_thread: request from:  ('127.0.0.1', 50854)
+new_thread: data from client:  sample message from client connection
+
+C:\labs>advpython66.py
+new_thread: request from:  ('127.0.0.1', 50855)
+new_thread: data from client:  sample message from client connection
+
+C:\labs>netstat -ano | find "31200"
+  TCP    127.0.0.1:31200        0.0.0.0:0              LISTENING       6192
+  TCP    127.0.0.1:50851        127.0.0.1:31200        TIME_WAIT       0
+  TCP    127.0.0.1:50852        127.0.0.1:31200        TIME_WAIT       0
+  TCP    127.0.0.1:50853        127.0.0.1:31200        TIME_WAIT       0
+  TCP    127.0.0.1:50854        127.0.0.1:31200        TIME_WAIT       0
+  TCP    127.0.0.1:50855        127.0.0.1:31200        TIME_WAIT       0
+
+C:\labs>advpython67.py
+new_thread: request from:  ('127.0.0.1', 50857)
+new_thread: data from client:  DONE
+
+Microsoft Windows [Version 10.0.17763.107]
+(c) 2018 Microsoft Corporation. All rights reserved.
+
+C:\Users\ansadm>cd \lab
+The system cannot find the path specified.
+
+C:\Users\ansadm>cd \labs
+
+C:\labs>start/b pythonlab30a.py
+
+C:\labs>netstat -ano | fine/i "3200"
+'fine' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\labs>netstat -ano | find/i "3200"
+
+C:\labs>netstat -ano | find/i "31200"
+  TCP    127.0.0.1:31200        0.0.0.0:0              LISTENING       5156
+
+C:\labs>curl -v telnet://localhost:31200
+* Rebuilt URL to: telnet://localhost:31200/
+*   Trying ::1...
+* TCP_NODELAY set
+*   Trying 127.0.0.1...
+* TCP_NODELAY set
+* request from:  ('127.0.0.1', 50651)
+Connected to localhost (127.0.0.1) port 31200 (#0)
+q
+server - data from client:  q
+
+:q
+server - data from client:  :q
+
+q
+:q
+Traceback (most recent call last):
+  File "C:\labs\pythonlab30a.py", line 23, in <module>
+    func()
+  File "C:\labs\pythonlab30a.py", line 14, in func
+^    data = clientsock.recv(1024)
+           ^^^^^^^^^^^^^^^^^^^^^
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remo
+te host
+C
+C:\labs>
+
+C:\labs>start/b pythonlab30a.py
+
+C:\labs>netstat -ano | fine/i "31200"
+'fine' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\labs>netstat -ano | find/i "31200"
+  TCP    127.0.0.1:31200        0.0.0.0:0              LISTENING       6312
+
+C:\labs>start/b pythonlab31.py
+The system cannot find the file pythonlab31.py.
+
+C:\labs>start/b pythonlab31a.py
+
+C:\labs>request from:  ('127.0.0.1', 50729)
+server - data from client:  sample message from client connection
+Traceback (most recent call last):
+  File "C:\labs\pythonlab30a.py", line 23, in <module>
+    func()
+  File "C:\labs\pythonlab30a.py", line 14, in func
+    data = clientsock.recv(1024)
+           ^^^^^^^^^^^^^^^^^^^^^
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the softwar
+e in your host machine
+q
+'q' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\labs>start/b pythonlab30.py
+
+C:\labs>python -qi
+>>> quit()
+
+C:\labs>pydoc3 os.fork
+No Python documentation found for 'os.fork'.
+Use help() to get the interactive help utility.
+Use help(str) for help on the str class.
+
+C:\labs>pydoc3 multiprocessing.Process
+Help on class Process in multiprocessing:
+
+multiprocessing.Process = class Process(multiprocessing.process.BaseProcess)
+ |  multiprocessing.Process(group=None, target=None, name=None, args=(), kwargs={}, *, daemon
+=None)
+ |
+ |  Method resolution order:
+ |      Process
+ |      multiprocessing.process.BaseProcess
+ |      builtins.object
+ |
+ |  Methods inherited from multiprocessing.process.BaseProcess:
+ |
+ |  __init__(self, group=None, target=None, name=None, args=(), kwargs={}, *, daemon=None)
+ |      Initialize self.  See help(type(self)) for accurate signature.
+ |
+ |  __repr__(self)
+ |      Return repr(self).
+ |
+ |  close(self)
+ |      Close the Process object.
+ |
+ |      This method releases resources held by the Process object.  It is
+ |      an error to call this method if the child process is still running.
+ |
+ |  is_alive(self)
+ |      Return whether process is alive
+ |
+ |  join(self, timeout=None)
+
+
+C:\labs>copy \advpython\advsamples\advpython54.py
+Overwrite C:\labs\advpython54.py? (Yes/No/All): Y
+        1 file(s) copied.
+
+C:\labs>start notepad++ advpython54.py
+
+C:\labs>advpytthon54.py
+'advpytthon54.py' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\labs>advpython54.py
+parent process: (id 2680)
+parent process: after child process start
+parent process: about to join child process
+child process: (id 7408)
+child process: sleeping for 5 seconds
+child process: done sleeping
+parent process: child process finished
+parent process: exiting
+
+C:\labs>copy \advpython\distributions\timethis_setu.exe
+The system cannot find the file specified.
+
+C:\labs>copy \advpython\distributions\timethis_setup.exe
+        1 file(s) copied.
+
+C:\labs> \advpython\distributions\timethis_setup.exe
+
+C:\labs>dir
+ Volume in drive C has no label.
+ Volume Serial Number is 60AE-64CF
+
+ Directory of C:\labs
+
+11/29/2023  02:00 PM    <DIR>          .
+11/29/2023  02:00 PM    <DIR>          ..
+11/28/2023  03:14 PM            21,975 .pylintrc
+07/10/2023  10:28 AM               292 advpython1.py
+11/15/2023  09:24 AM               538 advpython10.py
+07/10/2023  11:36 AM               222 advpython10_1.py
+09/05/2017  02:10 PM               213 advpython11.py
+07/10/2023  11:54 AM               386 advpython12.py
+11/29/2023  09:47 AM               378 advpython13.py
+07/10/2023  12:55 PM               236 advpython18.py
+07/10/2023  12:55 PM               178 advpython19.py
+07/10/2023  10:28 AM               182 advpython2.py
+07/10/2023  12:59 PM               357 advpython20.py
+09/06/2017  04:51 PM               494 advpython21.py
+07/10/2023  01:09 PM               389 advpython22.py
+07/10/2023  01:12 PM               462 advpython23.py
+07/10/2023  01:12 PM               710 advpython24.py
+07/10/2023  01:15 PM               640 advpython25.py
+07/10/2023  01:17 PM               226 advpython27.py
+07/10/2023  01:33 PM               250 advpython28.py
+11/28/2023  11:43 AM               313 advpython3.py
+07/10/2023  02:00 PM               241 advpython33.py
+07/10/2023  02:14 PM               145 advpython34.py
+07/10/2023  02:15 PM               145 advpython35.py
+07/10/2023  02:17 PM               173 advpython36.py
+07/10/2023  02:19 PM               371 advpython37.py
+07/10/2023  02:22 PM               556 advpython37_1.py
+07/10/2023  02:23 PM               301 advpython38.py
+07/10/2023  02:24 PM               129 advpython39.py
+07/10/2023  10:53 AM               490 advpython4.py
+07/10/2023  02:24 PM               237 advpython40.py
+07/10/2023  02:24 PM               332 advpython41.py
+07/10/2023  02:24 PM               340 advpython42.py
+07/10/2023  02:25 PM               246 advpython43.py
+07/10/2023  02:25 PM               340 advpython44.py
+07/10/2023  02:26 PM               476 advpython45.py
+07/10/2023  02:26 PM               286 advpython46.py
+07/10/2023  02:27 PM               161 advpython47.py
+07/10/2023  02:27 PM               141 advpython48.py
+07/10/2023  08:43 PM               362 advpython49.py
+07/10/2023  08:44 PM               448 advpython49a.py
+07/10/2023  10:56 AM               436 advpython5.py
+07/10/2023  08:48 PM               489 advpython50.py
+07/11/2023  01:52 PM               271 advpython51.py
+07/10/2023  09:12 PM               283 advpython51a.py
+07/10/2023  09:12 PM               279 advpython51b.py
+07/10/2023  09:33 PM               343 advpython52.py
+07/10/2023  09:52 PM               216 advpython53.py
+07/10/2023  09:59 PM               647 advpython54.py
+07/10/2023  10:01 PM               281 advpython56.py
+07/11/2023  11:51 AM               561 advpython58.py
+07/11/2023  11:51 AM               611 advpython59.py
+07/10/2023  10:55 AM               327 advpython6.py
+07/11/2023  11:55 AM               642 advpython60.py
+07/11/2023  12:03 PM               680 advpython61.py
+07/11/2023  12:04 PM               597 advpython62.py
+07/11/2023  12:08 PM               549 advpython63.py
+07/11/2023  12:26 PM               236 advpython66.py
+07/11/2023  12:25 PM               227 advpython67.py
+07/11/2023  01:49 PM               153 advpython68.py
+07/10/2023  11:02 AM               326 advpython7.py
+07/10/2023  09:18 PM               607 advpython70.py
+07/10/2023  09:20 PM               660 advpython71.py
+07/10/2023  11:31 AM               160 advpython8.py
+11/28/2023  04:13 PM               217 advpython9.py
+07/10/2023  11:53 AM               411 advpythonlab1.py
+11/28/2023  04:31 PM               295 advpythonlab2a.py
+11/17/2023  10:54 AM               382 advpythonlab2_windows.py
+11/28/2023  02:03 PM               243 anything.py
+11/04/2022  09:02 AM            15,360 cat.exe
+01/02/2022  06:42 PM               231 client.py
+11/28/2023  02:15 PM             1,545 docstrings.html
+07/17/2023  05:22 PM               179 docstrings.py
+11/28/2023  02:10 PM               247 docstrings_1.py
+11/17/2023  10:56 AM            17,408 egrep.exe
+11/13/2023  10:26 AM           135,680 grep.exe
+11/01/2023  12:51 PM               112 interpreted_1.py
+11/01/2022  09:08 PM               151 interpreted_2.py
+09/05/2017  12:45 PM                57 names.dat
+07/10/2023  11:18 AM            95,387 os.html
+11/28/2023  10:18 AM               208 python.sample.py
+11/29/2023  09:57 AM               867 python10.py
+07/10/2023  10:58 AM               324 python7.py
+11/29/2023  12:19 PM               493 pythonlab30.py
+11/29/2023  12:29 PM               493 pythonlab30a.py
+04/19/2022  06:28 PM               400 pythonlab31.py
+01/02/2022  06:42 PM               231 pythonlab31a.py
+11/29/2023  10:39 AM               408 pythonlab4.py
+11/06/2022  06:16 PM            49,152 sed.exe
+01/02/2022  06:02 PM               361 server.py
+07/10/2023  11:18 AM            26,383 sys.html
+11/17/2023  10:51 AM            35,328 tail.exe
+11/28/2023  10:13 AM            11,433 timedoc.txt
+11/06/2022  08:53 PM               252 times.py
+11/29/2023  09:28 AM               374 times2.py
+03/10/2015  08:37 AM           118,512 timethis_setup.exe
+06/28/2022  06:30 AM         3,044,352 vim.exe
+04/28/2014  04:44 PM         1,025,728 vmmap.exe
+11/04/2022  09:03 AM            29,696 wc.exe
+11/13/2023  10:27 AM           104,448 win32gnu.dll
+11/28/2023  04:29 PM    <DIR>          __pycache__
+              98 File(s)      4,761,290 bytes
+               3 Dir(s)  32,911,175,680 bytes free
+
+C:\labs>copy \advpython\advsamples\advpython56.py
+Overwrite C:\labs\advpython56.py? (Yes/No/All): Y
+        1 file(s) copied.
+
+C:\labs>start notepad++ advpython56.py
+
+C:\labs>timethis dir/b
+
+TimeThis :  Command Line :  dir/b
+TimeThis :    Start Time :  Wed Nov 29 14:06:42 2023
+
+.pylintrc
+advpython1.py
+advpython10.py
+advpython10_1.py
+advpython11.py
+advpython12.py
+advpython13.py
+advpython18.py
+advpython19.py
+advpython2.py
+advpython20.py
+advpython21.py
+advpython22.py
+advpython23.py
+advpython24.py
+advpython25.py
+advpython27.py
+advpython28.py
+advpython3.py
+advpython33.py
+advpython34.py
+advpython35.py
+advpython36.py
+advpython37.py
+advpython37_1.py
+advpython38.py
+advpython39.py
+advpython4.py
+advpython40.py
+advpython41.py
+advpython42.py
+advpython43.py
+advpython44.py
+advpython45.py
+advpython46.py
+advpython47.py
+advpython48.py
+advpython49.py
+advpython49a.py
+advpython5.py
+advpython50.py
+advpython51.py
+advpython51a.py
+advpython51b.py
+advpython52.py
+advpython53.py
+advpython54.py
+advpython56.py
+advpython58.py
+advpython59.py
+advpython6.py
+advpython60.py
+advpython61.py
+advpython62.py
+advpython63.py
+advpython66.py
+advpython67.py
+advpython68.py
+advpython7.py
+advpython70.py
+advpython71.py
+advpython8.py
+advpython9.py
+advpythonlab1.py
+advpythonlab2a.py
+advpythonlab2_windows.py
+anything.py
+cat.exe
+client.py
+docstrings.html
+docstrings.py
+docstrings_1.py
+egrep.exe
+grep.exe
+interpreted_1.py
+interpreted_2.py
+names.dat
+os.html
+python.sample.py
+python10.py
+python7.py
+pythonlab30.py
+pythonlab30a.py
+pythonlab31.py
+pythonlab31a.py
+pythonlab4.py
+sed.exe
+server.py
+sys.html
+tail.exe
+timedoc.txt
+times.py
+times2.py
+timethis_setup.exe
+vim.exe
+vmmap.exe
+wc.exe
+win32gnu.dll
+__pycache__
+
+TimeThis :  Command Line :  dir/b
+TimeThis :    Start Time :  Wed Nov 29 14:06:42 2023
+TimeThis :      End Time :  Wed Nov 29 14:06:42 2023
+TimeThis :  Elapsed Time :  00:00:00.109
+
+C:\labs>timethis dir/b
+
+TimeThis :  Command Line :  dir/b
+TimeThis :    Start Time :  Wed Nov 29 14:07:34 2023
+
+.pylintrc
+advpython1.py
+advpython10.py
+advpython10_1.py
+advpython11.py
+advpython12.py
+advpython13.py
+advpython18.py
+advpython19.py
+advpython2.py
+advpython20.py
+advpython21.py
+advpython22.py
+advpython23.py
+advpython24.py
+advpython25.py
+advpython27.py
+advpython28.py
+advpython3.py
+advpython33.py
+advpython34.py
+advpython35.py
+advpython36.py
+advpython37.py
+advpython37_1.py
+advpython38.py
+advpython39.py
+advpython4.py
+advpython40.py
+advpython41.py
+advpython42.py
+advpython43.py
+advpython44.py
+advpython45.py
+advpython46.py
+advpython47.py
+advpython48.py
+advpython49.py
+advpython49a.py
+advpython5.py
+advpython50.py
+advpython51.py
+advpython51a.py
+advpython51b.py
+advpython52.py
+advpython53.py
+advpython54.py
+advpython56.py
+advpython58.py
+advpython59.py
+advpython6.py
+advpython60.py
+advpython61.py
+advpython62.py
+advpython63.py
+advpython66.py
+advpython67.py
+advpython68.py
+advpython7.py
+advpython70.py
+advpython71.py
+advpython8.py
+advpython9.py
+advpythonlab1.py
+advpythonlab2a.py
+advpythonlab2_windows.py
+anything.py
+cat.exe
+client.py
+docstrings.html
+docstrings.py
+docstrings_1.py
+egrep.exe
+grep.exe
+interpreted_1.py
+interpreted_2.py
+names.dat
+os.html
+python.sample.py
+python10.py
+python7.py
+pythonlab30.py
+pythonlab30a.py
+pythonlab31.py
+pythonlab31a.py
+pythonlab4.py
+sed.exe
+server.py
+sys.html
+tail.exe
+timedoc.txt
+times.py
+times2.py
+timethis_setup.exe
+vim.exe
+vmmap.exe
+wc.exe
+win32gnu.dll
+__pycache__
+
+TimeThis :  Command Line :  dir/b
+TimeThis :    Start Time :  Wed Nov 29 14:07:34 2023
+TimeThis :      End Time :  Wed Nov 29 14:07:34 2023
+TimeThis :  Elapsed Time :  00:00:00.109
+
+C:\labs>copy \advpython\advsamples\advpython58.py
+Overwrite C:\labs\advpython58.py? (Yes/No/All): Y
+        1 file(s) copied.
+
+C:\labs>start notepad++ advpython58.py
+
+C:\labs>start notepad++ advpython59.py
+
+C:\labs>advpython59.py
+master: pid:  6708 TID:  1792
+master: creating new thread
+new_thread: code in new thread
+master: waiting for thread to finish
+new_thread: pid: 6708 TID: 7496
+new_thread: finished
+master: back after thread has finished
+
+C:\labs>start/b pythonlab30.py
+
+C:\labs>Traceback (most recent call last):
+  File "C:\labs\pythonlab30.py", line 23, in <module>
+    func()
+  File "C:\labs\pythonlab30.py", line 9, in func
+    srvsock.bind(("localhost",31200))
+OSError: [WinError 10048] Only one usage of each socket address (protocol/network address/por
+t) is normally permitted
+q
+'q' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\labs>start/b server.py
+
+C:\labs>netstat -ano | find/i "31200"
+  TCP    0.0.0.0:31200          0.0.0.0:0              LISTENING       7312
+  TCP    127.0.0.1:31200        0.0.0.0:0              LISTENING       6880
+
+C:\labs>tasklist | find/i "7312"
+python.exe                    7312 Console                    1      9,648 K
+
+C:\labs>curl -v telnet://localhost:31200
+* Rebuilt URL to: telnet://localhost:31200/
+*   Trying ::1...
+* TCP_NODELAY set
+*   Trying 127.0.0.1...
+* TCP_NODELAY set
+* request from:  ('127.0.0.1', 50800)
+Connected to localhost (127.0.0.1) port 31200 (#0)
+^C
+server - data from client:  ^C
+
+q
+server - data from client:  q
+
+:q
+server - data from client:  :q
+
+
+server - data from client:
+
+^C
+server - data from client:  ^C
+
+^C^C
+server - data from client:  ^C^C
+
+^C
+q
+:q
+
+^C
+^C^C
+Traceback (most recent call last):
+  File "C:\labs\pythonlab30.py", line 23, in <module>
+    func()
+  File "C:\labs\pythonlab30.py", line 14, in func
+    data = clientsock.recv(6800)
+           ^^^^^^^^^^^^^^^^^^^^^
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remo
+te host
+^C
+C:\labs>
+
+C:\labs>copy \advpython\advsamples\advpython6?.py
+\advpython\advsamples\advpython6.py
+Overwrite C:\labs\advpython6.py? (Yes/No/All): N
+\advpython\advsamples\advpython60.py
+Overwrite C:\labs\advpython60.py? (Yes/No/All): Y
+\advpython\advsamples\advpython61.py
+Overwrite C:\labs\advpython61.py? (Yes/No/All): Y
+\advpython\advsamples\advpython62.py
+Overwrite C:\labs\advpython62.py? (Yes/No/All): Y
+\advpython\advsamples\advpython63.py
+Overwrite C:\labs\advpython63.py? (Yes/No/All): Y
+\advpython\advsamples\advpython66.py
+Overwrite C:\labs\advpython66.py? (Yes/No/All): Y
+\advpython\advsamples\advpython67.py
+Overwrite C:\labs\advpython67.py? (Yes/No/All): Y
+\advpython\advsamples\advpython68.py
+Overwrite C:\labs\advpython68.py? (Yes/No/All): Y
+        7 file(s) copied.
+
+C:\labs>pydoc3 concurrent.futures
+Help on package concurrent.futures in concurrent:
+
+NAME
+    concurrent.futures - Execute computations asynchronously using threads or processes.
+
+MODULE REFERENCE
+    https://docs.python.org/3.11/library/concurrent.futures.html
+
+    The following documentation is automatically generated from the Python
+    source files.  It may be incomplete, incorrect or include features that
+    are considered implementation detail and may vary between Python
+    implementations.  When in doubt, consult the module reference at the
+    location listed above.
+
+PACKAGE CONTENTS
+    _base
+    process
+    thread
+
+CLASSES
+    builtins.OSError(builtins.Exception)
+        builtins.TimeoutError
+    builtins.RuntimeError(builtins.Exception)
+        concurrent.futures._base.BrokenExecutor
+    builtins.object
+        concurrent.futures._base.Executor
+
+
+C:\labs>
+C:\labs>advpython61.py
+main: starting threads
+thread1: Lock acquired 1701288736.1606367
+thread2: trying to acquire lock
+main: finished
+thread1: finished
+thread2: Lock acquired 1701288738.1707602
+thread2: finished
+
+C:\labs>advpython62.py
+thread1: waiting at barrier 1701288748.7332826
+main: finished
+thread2: waiting at barrier 1701288750.7413306
+thread2: continuing from barrier
+thread1: continuing from barrier
+
+C:\labs>copy advpython62.py advpythonlab16.py
+        1 file(s) copied.
+
+C:\labs>start notepad++ advpythonlab16.py
+
+C:\labs>advpythonlab16.py
+thread1: waiting at barrier 1701289241.1007283
+main: finished
+thread2: waiting at barrier 1701289243.1093106
+thread2: released from barrier num:  1
+thread1: released from barrier num:  0
+
+C:\labs>start notepad++ advpython63.py
+
+C:\labs>advpython63.py
+thread1: semaphore acquired 1701289752.889529
+thread2: trying to acquire semaphore
+thread2: semaphore acquired 1701289754.8985713
+
+C:\labs>copy \advpython\advsamples\multi_threading_server.py
+        1 file(s) copied.
+
+C:\labs>start/b multi_threading_server.py
+
+C:\labs>netstat -ano | find/i "31200"
+  TCP    0.0.0.0:31200          0.0.0.0:0              LISTENING       7312
+  TCP    127.0.0.1:31200        0.0.0.0:0              LISTENING       4152
+
+C:\labs>advpython66.py
+new_thread: request from:  ('127.0.0.1', 50847)
+new_thread: data from client:  sample message from client connection
+
+C:\labs>netstat -ano | find/i "31200"
+  TCP    0.0.0.0:31200          0.0.0.0:0              LISTENING       7312
+  TCP    127.0.0.1:31200        0.0.0.0:0              LISTENING       4152
+  TCP    127.0.0.1:50847        127.0.0.1:31200        TIME_WAIT       0
+
+C:\labs>netstat -ano | find "31200"
+  TCP    0.0.0.0:31200          0.0.0.0:0              LISTENING       7312
+  TCP    127.0.0.1:31200        0.0.0.0:0              LISTENING       4152
+  TCP    127.0.0.1:50847        127.0.0.1:31200        TIME_WAIT       0
+
+C:\labs>taskkill/fi "pid eq 7312" /f
+SUCCESS: The process with PID 7312 has been terminated.
+
+C:\labs>taskkill/fi "pid eq 4152" /f
+SUCCESS: The process with PID 4152 has been terminated.
+
+C:\labs>start/b multi_threading_server.py
+
+C:\labs>for /L %x in (1,1,5) do advpython66.py
+
+C:\labs>advpython66.py
+new_thread: request from:  ('127.0.0.1', 50851)
+new_thread: data from client:  sample message from client connection
+
+C:\labs>advpython66.py
+new_thread: request from:  ('127.0.0.1', 50852)
+new_thread: data from client:  sample message from client connection
+
+C:\labs>advpython66.py
+new_thread: request from:  ('127.0.0.1', 50853)
+new_thread: data from client:  sample message from client connection
+
+C:\labs>advpython66.py
+new_thread: request from:  ('127.0.0.1', 50854)
+new_thread: data from client:  sample message from client connection
+
+C:\labs>advpython66.py
+new_thread: request from:  ('127.0.0.1', 50855)
+new_thread: data from client:  sample message from client connection
+
+C:\labs>netstat -ano | find "31200"
+  TCP    127.0.0.1:31200        0.0.0.0:0              LISTENING       6192
+  TCP    127.0.0.1:50851        127.0.0.1:31200        TIME_WAIT       0
+  TCP    127.0.0.1:50852        127.0.0.1:31200        TIME_WAIT       0
+  TCP    127.0.0.1:50853        127.0.0.1:31200        TIME_WAIT       0
+  TCP    127.0.0.1:50854        127.0.0.1:31200        TIME_WAIT       0
+  TCP    127.0.0.1:50855        127.0.0.1:31200        TIME_WAIT       0
+
+C:\labs>advpython67.py
+new_thread: request from:  ('127.0.0.1', 50857)
+new_thread: data from client:  DONE
+
+C:\labs>copy \advpython\advsamples\cars
+        1 file(s) copied.
+
+C:\labs>grep -c chevy cars
+3
+
+C:\labs>start notepad++ advpython20.py
+
+C:\labs>advpython20.py
+
+Traceback (most recent call last):
+  File "C:\labs\advpython20.py", line 19, in <module>
+    func()
+  File "C:\labs\advpython20.py", line 12, in func
+    if array[0] in carss :
+       ~~~~~^^^
+IndexError: list index out of range
+
+C:\labs>advpython20.py cars
+car: plym       count:   1
+car: chevy      count:   3
+car: ford       count:   4
+car: volvo      count:   1
+car: fiat       count:   1
+car: honda      count:   1
+car: toyota     count:   1
+
+C:\labs>advpython20.py cars
+car: 77         count:   1
+car: 79         count:   1
+car: 65         count:   3
+car: 78         count:   1
+car: 83         count:   2
+car: 80         count:   1
+car: 81         count:   1
+car: 84         count:   1
+car: 82         count:   1
+
+C:\labs>advpython20.py cars
+  File "C:\labs\advpython20.py", line 18
+    key.sort()
+TabError: inconsistent use of tabs and spaces in indentation
+
+C:\labs>advpython20.py cars
+  File "C:\labs\advpython20.py", line 18
+    key.sort()
+TabError: inconsistent use of tabs and spaces in indentation
+
+C:\labs>advpython20.py cars
+  File "C:\labs\advpython20.py", line 8
+    makes = {}
+TabError: inconsistent use of tabs and spaces in indentation
+
+C:\labs>copy advpython\advsolutions\advpythonlab5a.py
+The system cannot find the path specified.
+
+C:\labs>start notepad++ advpythonlab5a.py
+
+C:\labs>copy \advpython\advsolutions\advpythonlab5a.py
+        1 file(s) copied.
+
+C:\labs>advpython20.py cars
+  File "C:\labs\advpython20.py", line 8
+    makes = {}
+TabError: inconsistent use of tabs and spaces in indentation
+
+C:\labs>start notepad++ advpythonlab5a.py
+
+C:\labs>advpythonlab5a.py cars
+  File "C:\labs\advpythonlab5a.py", line 11
+    for line in input() :
+                         ^
+IndentationError: unindent does not match any outer indentation level
+
+C:\labs>advpythonlab5a.py cars
+  File "C:\labs\advpythonlab5a.py", line 11
+    for line in input():
+                        ^
+IndentationError: unindent does not match any outer indentation level
+
+C:\labs>advpythonlab5b.py cars
+  File "C:\labs\advpythonlab5b.py", line 12
+    array = line.split()
+TabError: inconsistent use of tabs and spaces in indentation
+
+C:\labs>advpythonlab5b.py cars
+Traceback (most recent call last):
+  File "C:\labs\advpythonlab5b.py", line 23, in <module>
+    func()
+  File "C:\labs\advpythonlab5b.py", line 22, in func
+    print(f'{keyy:3s}={data:3d} {makes[key]}')
+             ^^^^
+NameError: name 'keyy' is not defined. Did you mean: 'key'?
+
+C:\labs>advpythonlab5b.py cars
+77 =  1 plym ($ 2500)
+79 =  1 chevy ($ 3000)
+65 =  3 ford ($ 10000)fiat ($450)chevy ($1550)
+78 =  1 volvo ($ 9850)
+83 =  2 ford ($ 10500)ford ($9500)
+80 =  1 chevy ($ 3500)
+81 =  1 honda ($ 6000)
+84 =  1 ford ($ 17000)
+82 =  1 toyota ($ 750)
+
+C:\labs>start notepad++ advpython22.py
+
+C:\labs>copy advpython21.py advpythonlab3.py
+        1 file(s) copied.
+
+C:\labs>start notepad++ advpythonlab3.py
+
+C:\labs>advpythonlab3.py cars
+  File "C:\labs\advpythonlab3.py", line 18
+    row = " ".join(carss[key])
+TabError: inconsistent use of tabs and spaces in indentation
+
+C:\labs>advpythonlab3.py cars
+  File "C:\labs\advpythonlab3.py", line 18
+    row = " ".join(carss[key])
+TabError: inconsistent use of tabs and spaces in indentation
+
+C:\labs>advpythonlab3.py cars
+  File "C:\labs\advpythonlab3.py", line 19
+    print('%-3s=%3s  %s' % (key,len(data),row)
+         ^
+SyntaxError: '(' was never closed
+
+C:\labs>advpythonlab3.py cars
+77 =  1  plym
+79 =  1  chevy
+65 =  3  ford fiat chevy
+78 =  1  volvo
+83 =  2  ford ford
+80 =  1  chevy
+81 =  1  honda
+84 =  1  ford
+82 =  1  toyota
+
+C:\labs>advpythonlab3.py cars
+Traceback (most recent call last):
+  File "C:\labs\advpythonlab3.py", line 20, in <module>
+    func()
+  File "C:\labs\advpythonlab3.py", line 12, in func
+    if array[2] in carss :
+       ~~~~~^^^
+IndexError: list index out of range
+
+C:\labs>advpythonlab3.py cars
+Traceback (most recent call last):
+  File "C:\labs\advpythonlab3.py", line 20, in <module>
+    func()
+  File "C:\labs\advpythonlab3.py", line 12, in func
+    if array[2] in carss :
+       ~~~~~^^^
+IndexError: list index out of range
+
+C:\labs>advpythonlab3.py cars
+77 =  1  plym
+79 =  1  chevy
+65 =  3  ford fiat chevy
+78 =  1  volvo
+83 =  2  ford ford
+80 =  1  chevy
+81 =  1  honda
+84 =  1  ford
+82 =  1  toyota
+
+C:\labs>advpythonlab3.py cars
+Traceback (most recent call last):
+  File "C:\labs\advpythonlab3.py", line 20, in <module>
+    func()
+  File "C:\labs\advpythonlab3.py", line 12, in func
+    if array[2] in carss :
+       ~~~~~^^^
+IndexError: list index out of range
+
+C:\labs>advpythonlab3.py cars
+Traceback (most recent call last):
+  File "C:\labs\advpythonlab3.py", line 20, in <module>
+    func()
+  File "C:\labs\advpythonlab3.py", line 12, in func
+    if array[2] in carss :
+       ~~~~~^^^
+IndexError: list index out of range
+
+C:\labs>advpythonlab3.py cars
+77 =  1  plym
+79 =  1  chevy
+65 =  3  ford fiat chevy
+78 =  1  volvo
+83 =  2  ford ford
+80 =  1  chevy
+81 =  1  honda
+84 =  1  ford
+82 =  1  toyota
+
+C:\labs>advpython21.py cars
+77 =  1  plym
+79 =  1  chevy
+65 =  3  ford fiat chevy
+78 =  1  volvo
+83 =  2  ford ford
+80 =  1  chevy
+81 =  1  honda
+84 =  1  ford
+82 =  1  toyota
+
+C:\labs>pydoc3 signals
+No Python documentation found for 'signals'.
+Use help() to get the interactive help utility.
+Use help(str) for help on the str class.
+
+C:\labs>pydoc3 signal
+Help on module signal:
+
+NAME
+    signal
+
+MODULE REFERENCE
+    https://docs.python.org/3.11/library/signal.html
+
+    The following documentation is automatically generated from the Python
+    source files.  It may be incomplete, incorrect or include features that
+    are considered implementation detail and may vary between Python
+    implementations.  When in doubt, consult the module reference at the
+    location listed above.
+
+CLASSES
+    enum.IntEnum(builtins.int, enum.ReprEnum)
+        Handlers
+        Signals
+
+    class Handlers(enum.IntEnum)
+     |  Handlers(value, names=None, *, module=None, qualname=None, type=None, start=1, bounda
+ry=None)
+     |
+     |  An enumeration.
+     |
+
+
+C:\labs>pydoc3 signal.signal
+Help on function signal in signal:
+
+signal.signal = signal(signalnum, handler)
+    Set the action for the given signal.
+
+    The action can be SIG_DFL, SIG_IGN, or a callable Python object.
+    The previous action is returned.  See getsignal() for possible return values.
+
+    *** IMPORTANT NOTICE ***
+    A signal handler function is called with two arguments:
+    the first is the signal number, the second is the interrupted stack frame.
+
+
+C:\labs>start notepad++ advpython24.py
+
+C:\labs>advpython24.py
+begin wait loop... 10:34:52
+control/C was entered...
+out of wait loop...10:34:57
+
+begin wait loop... 10:34:57
+out of wait loop...10:35:2
+
+C:\labs>advpython24.py
+begin wait loop... 10:35:14
+control/C was entered...
+out of wait loop...10:35:19
+
+begin wait loop... 10:35:19
+out of wait loop...10:35:24
+
+C:\labs>
+
+C:\labs>
+
+C:\labs>advpython24.py
+begin wait loop... 10:39:55
+out of wait loop...10:40:0
+
+begin wait loop... 10:40:0
+^C
+C:\labs>copy advpython25.py advpythonlab4a.py
+        1 file(s) copied.
+
+C:\labs>copy \advpython\advpythonsolutions\advpythonlab4.py
+The system cannot find the path specified.
+
+C:\labs>copy \advpython\advsolutions\advpythonlab4.py
+        1 file(s) copied.
+
+C:\labs>start notepad++ advpythonlab4.py
+
+C:\labs>start notepad++ advpythonlab4a.py
+
+C:\labs>advpythonlab4a.py
+Hit [Enter] to start timer:
+Hit [Enter] to finish timer:
+Walll clock start... 11:10:11
+Walll clock finish... 11:10:12
+
+C:\labs>advpythonlab4a.py
+Hit [Enter] to start timer:
+Hit [Enter] to finish timer:
+Wall clock start... 11:12:21
+Wall clock finish... 11:12:25
+Real time duration... 4.10933518409729
+
+C:\labs>copy advpython27.py advpythonlab5.py
+        1 file(s) copied.
+
+C:\labs>start notebook++ advpythonlab5.py
+The system cannot find the file notebook++.
+
+C:\labs>start notepad++ advpythonlab4a.py
+
+C:\labs>start notepad++ advpythonlab5.py
+
+C:\labs>advpython27.py
+Enter integer value:6
+Enter integer value:14
+comparison value:  -1
+
+C:\labs>advpython27.py
+Enter integer value:7
+Enter integer value:7
+comparison value:  0
+
+C:\labs>advpython27.py
+Enter integer value:0
+Enter integer value:3
+comparison value:  -1
+
+C:\labs>advpythonlab5.py
+Enter integer value:0
+Enter integer value:3
+The first value is smaller than the second value.
+
+C:\labs>pydoc3 with
+The "with" statement
+********************
+
+The "with" statement is used to wrap the execution of a block with
+methods defined by a context manager (see section With Statement
+Context Managers). This allows common "try"\u2026"except"\u2026"finally" usage
+patterns to be encapsulated for convenient reuse.
+
+   with_stmt          ::= "with" ( "(" with_stmt_contents ","? ")" | with_stmt_contents ) ":"
+ suite
+   with_stmt_contents ::= with_item ("," with_item)*
+   with_item          ::= expression ["as" target]
+
+The execution of the "with" statement with one \u201citem\u201d proceeds as
+follows:
+
+1. The context expression (the expression given in the "with_item") is
+   evaluated to obtain a context manager.
+
+2. The context manager\u2019s "__enter__()" is loaded for later use.
+
+3. The context manager\u2019s "__exit__()" is loaded for later use.
+
+4. The context manager\u2019s "__enter__()" method is invoked.
+
+
+
+C:\labs>advpython28.py
+Enter a line: 5
+Enter a line: 7
+Enter a line: 9
+Enter a line: 3
+Enter a line: 5
+
+C:\labs>copy cars cars2
+        1 file(s) copied.
+
+C:\labs>type temp.dat
+5
+7
+9
+3
+5
+
+C:\labs>copy advpython28.py advpythonlab6.py
+        1 file(s) copied.
+
+C:\labs>start notepad++ advpythonlab6.py
+
+C:\labs>advpythonlab6.py
+  File "C:\labs\advpythonlab6.py", line 8
+    for line in file :
+TabError: inconsistent use of tabs and spaces in indentation
+
+C:\labs>advpythonlab6.py
+  File "C:\labs\advpythonlab6.py", line 8
+    for line in file :
+TabError: inconsistent use of tabs and spaces in indentation
+
+C:\labs>advpythonlab6.py
+  File "C:\labs\advpythonlab6.py", line 10
+    print(line,end=""
+         ^
+SyntaxError: '(' was never closed
+
+C:\labs>advpythonlab6.py
+5
+7
+9
+3
+5
+
+C:\labs>advpythonlab6.py
+5
+5
+
+C:\labs>advpythonlab6.py
+5
+5
+5
+
+5
+5
+
+C:\labs>advpythonlab6.py
+5
+
+Traceback (most recent call last):
+  File "C:\labs\advpythonlab6.py", line 22, in <module>
+    func()
+  File "C:\labs\advpythonlab6.py", line 20, in func
+    print(first_record,last_record,sep="",end="")
+          ^^^^^^^^^^^^
+NameError: name 'first_record' is not defined
+
+C:\labs>advpythonlab6.py
+5
+
+
+C:\labs>advpythonlab6.py
+5
+7
+9
+3
+5
+
+C:\labs>advpythonlab6.py
+  File "C:\labs\advpythonlab6.py", line 23
+    record=file.read()
+    ^
+IndentationError: expected an indented block after 'with' statement on line 22
+
+C:\labs>advpythonlab6.py
+5
+7
+9
+3
+5
+<_io.TextIOWrapper name='temp.dat' mode='r' encoding='cp1252'>
+
+C:\labs>copy advpython33.pyy advpythonlab9.py
+The system cannot find the file specified.
+
+C:\labs>copy advpython33.py advpythonlab9.py
+        1 file(s) copied.
+
+C:\labs>start notepad++ advpythonlab9.py
+
+C:\labs>advpythonlab9.py
+Traceback (most recent call last):
+  File "C:\labs\advpythonlab9.py", line 24, in <module>
+    func()
+  File "C:\labs\advpythonlab9.py", line 10, in func
+    if len(sys_argv) == 1 :
+           ^^^^^^^^
+NameError: name 'sys_argv' is not defined
+
+C:\labs>advpythonlab9.py
+Traceback (most recent call last):
+  File "C:\labs\advpythonlab9.py", line 24, in <module>
+    func()
+  File "C:\labs\advpythonlab9.py", line 10, in func
+    if len(sys_argv) == 1 :
+           ^^^^^^^^
+NameError: name 'sys_argv' is not defined
+
+C:\labs>advpythonlab9.py
+Traceback (most recent call last):
+  File "C:\labs\advpythonlab9.py", line 24, in <module>
+    func()
+  File "C:\labs\advpythonlab9.py", line 21, in func
+    total += stat(file).st_size
+             ^^^^
+NameError: name 'stat' is not defined
+
+C:\labs>advpythonlab9.py
+total of all files sizes:  4770711
+
+C:\labs>fbf_pythonn_windows.py C:\python311
+'fbf_pythonn_windows.py' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\labs>fbf_python_windows.py C:\python311
+'fbf_python_windows.py' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\labs>copy \advpython\advsamples\fbf_python_windows.py
+        1 file(s) copied.
+
+C:\labs>fbf_python_windows.py C:\python311
+   14487 files examined
+ C:\python311 C:\python311\Lib\site-packages\libmysql.dll  :  7013448
+
+C:\labs>timethis dir
+
+TimeThis :  Command Line :  dir
+TimeThis :    Start Time :  Thu Nov 30 14:15:57 2023
+
+ Volume in drive C has no label.
+ Volume Serial Number is 60AE-64CF
+
+ Directory of C:\labs
+
+11/30/2023  02:03 PM    <DIR>          .
+11/30/2023  02:03 PM    <DIR>          ..
+11/28/2023  03:14 PM            21,975 .pylintrc
+07/10/2023  10:28 AM               292 advpython1.py
+11/15/2023  09:24 AM               538 advpython10.py
+07/10/2023  11:36 AM               222 advpython10_1.py
+09/05/2017  02:10 PM               213 advpython11.py
+07/10/2023  11:54 AM               386 advpython12.py
+11/29/2023  09:47 AM               378 advpython13.py
+07/10/2023  12:55 PM               236 advpython18.py
+07/10/2023  12:55 PM               178 advpython19.py
+07/10/2023  10:28 AM               182 advpython2.py
+11/29/2023  04:33 PM               513 advpython20.py
+09/06/2017  04:51 PM               494 advpython21.py
+07/10/2023  01:09 PM               389 advpython22.py
+07/10/2023  01:12 PM               462 advpython23.py
+11/30/2023  10:39 AM               710 advpython24.py
+07/10/2023  01:15 PM               640 advpython25.py
+07/10/2023  01:17 PM               226 advpython27.py
+07/10/2023  01:33 PM               250 advpython28.py
+11/28/2023  11:43 AM               313 advpython3.py
+07/10/2023  02:00 PM               241 advpython33.py
+07/10/2023  02:14 PM               145 advpython34.py
+07/10/2023  02:15 PM               145 advpython35.py
+07/10/2023  02:17 PM               173 advpython36.py
+07/10/2023  02:19 PM               371 advpython37.py
+07/10/2023  02:22 PM               556 advpython37_1.py
+07/10/2023  02:23 PM               301 advpython38.py
+07/10/2023  02:24 PM               129 advpython39.py
+07/10/2023  10:53 AM               490 advpython4.py
+07/10/2023  02:24 PM               237 advpython40.py
+07/10/2023  02:24 PM               332 advpython41.py
+07/10/2023  02:24 PM               340 advpython42.py
+07/10/2023  02:25 PM               246 advpython43.py
+07/10/2023  02:25 PM               340 advpython44.py
+07/10/2023  02:26 PM               476 advpython45.py
+07/10/2023  02:26 PM               286 advpython46.py
+07/10/2023  02:27 PM               161 advpython47.py
+07/10/2023  02:27 PM               141 advpython48.py
+07/10/2023  08:43 PM               362 advpython49.py
+07/10/2023  08:44 PM               448 advpython49a.py
+07/10/2023  10:56 AM               436 advpython5.py
+07/10/2023  08:48 PM               489 advpython50.py
+07/11/2023  01:52 PM               271 advpython51.py
+07/10/2023  09:12 PM               283 advpython51a.py
+07/10/2023  09:12 PM               279 advpython51b.py
+07/10/2023  09:33 PM               343 advpython52.py
+07/10/2023  09:52 PM               216 advpython53.py
+07/10/2023  09:59 PM               647 advpython54.py
+07/10/2023  10:01 PM               281 advpython56.py
+07/11/2023  11:51 AM               561 advpython58.py
+07/11/2023  11:51 AM               611 advpython59.py
+07/10/2023  10:55 AM               327 advpython6.py
+07/11/2023  11:55 AM               642 advpython60.py
+07/11/2023  12:03 PM               680 advpython61.py
+07/11/2023  12:04 PM               597 advpython62.py
+07/11/2023  12:08 PM               549 advpython63.py
+07/11/2023  12:26 PM               236 advpython66.py
+07/11/2023  12:25 PM               227 advpython67.py
+07/11/2023  01:49 PM               153 advpython68.py
+07/10/2023  11:02 AM               326 advpython7.py
+07/10/2023  09:18 PM               607 advpython70.py
+07/10/2023  09:20 PM               660 advpython71.py
+07/10/2023  11:31 AM               160 advpython8.py
+11/28/2023  04:13 PM               217 advpython9.py
+07/10/2023  11:53 AM               411 advpythonlab1.py
+11/29/2023  03:23 PM               625 advpythonlab16.py
+11/28/2023  04:31 PM               295 advpythonlab2a.py
+11/17/2023  10:54 AM               382 advpythonlab2_windows.py
+11/30/2023  09:34 AM               432 advpythonlab3.py
+07/10/2023  01:15 PM               459 advpythonlab4.py
+11/30/2023  11:12 AM               500 advpythonlab4a.py
+11/30/2023  11:47 AM               491 advpythonlab5.py
+11/30/2023  08:59 AM               467 advpythonlab5b.py
+11/30/2023  12:20 PM               492 advpythonlab6.py
+11/30/2023  02:00 PM               404 advpythonlab9.py
+11/28/2023  02:03 PM               243 anything.py
+09/06/2017  04:48 PM               285 cars
+09/06/2017  04:48 PM               285 cars2
+11/04/2022  09:02 AM            15,360 cat.exe
+01/02/2022  06:42 PM               231 client.py
+11/28/2023  02:15 PM             1,545 docstrings.html
+07/17/2023  05:22 PM               179 docstrings.py
+11/28/2023  02:10 PM               247 docstrings_1.py
+11/17/2023  10:56 AM            17,408 egrep.exe
+07/10/2023  02:11 PM               764 fbf_python_windows.py
+11/13/2023  10:26 AM           135,680 grep.exe
+11/01/2023  12:51 PM               112 interpreted_1.py
+11/01/2022  09:08 PM               151 interpreted_2.py
+07/11/2023  12:25 PM               714 multi_threading_server.py
+09/05/2017  12:45 PM                57 names.dat
+07/10/2023  11:18 AM            95,387 os.html
+11/28/2023  10:18 AM               208 python.sample.py
+11/29/2023  09:57 AM               867 python10.py
+07/10/2023  10:58 AM               324 python7.py
+11/29/2023  12:19 PM               493 pythonlab30.py
+11/29/2023  12:29 PM               493 pythonlab30a.py
+04/19/2022  06:28 PM               400 pythonlab31.py
+01/02/2022  06:42 PM               231 pythonlab31a.py
+11/29/2023  10:39 AM               408 pythonlab4.py
+11/06/2022  06:16 PM            49,152 sed.exe
+01/02/2022  06:02 PM               361 server.py
+07/10/2023  11:18 AM            26,383 sys.html
+11/17/2023  10:51 AM            35,328 tail.exe
+11/30/2023  11:55 AM                15 temp.dat
+11/28/2023  10:13 AM            11,433 timedoc.txt
+11/06/2022  08:53 PM               252 times.py
+11/29/2023  09:28 AM               374 times2.py
+03/10/2015  08:37 AM           118,512 timethis_setup.exe
+06/28/2022  06:30 AM         3,044,352 vim.exe
+04/28/2014  04:44 PM         1,025,728 vmmap.exe
+11/04/2022  09:03 AM            29,696 wc.exe
+11/13/2023  10:27 AM           104,448 win32gnu.dll
+11/28/2023  04:29 PM    <DIR>          __pycache__
+             111 File(s)      4,767,379 bytes
+               3 Dir(s)  32,429,080,576 bytes free
+
+TimeThis :  Command Line :  dir
+TimeThis :    Start Time :  Thu Nov 30 14:15:57 2023
+TimeThis :      End Time :  Thu Nov 30 14:15:57 2023
+TimeThis :  Elapsed Time :  00:00:00.124
+
+C:\labs>timethis fbf_python_windows.py C:\
+
+TimeThis :  Command Line :  fbf_python_windows.py C:\
+TimeThis :    Start Time :  Thu Nov 30 14:16:44 2023
+
+  289591 files examined
+ C:\ C:\Windows\SoftwareDistribution\Download\c8973bc7253c365be79f206b7bc3f2b6\Windows10.0-KB
+5032196-x64.cab  :  619598326
+
+TimeThis :  Command Line :  fbf_python_windows.py C:\
+TimeThis :    Start Time :  Thu Nov 30 14:16:44 2023
+TimeThis :      End Time :  Thu Nov 30 14:17:37 2023
+TimeThis :  Elapsed Time :  00:00:52.484
+
+C:\labs>timethis fbf_python_windows.py C:\
+
+TimeThis :  Command Line :  fbf_python_windows.py C:\
+TimeThis :    Start Time :  Thu Nov 30 14:19:34 2023
+
+  289591 files examined
+ C:\ C:\Windows\SoftwareDistribution\Download\c8973bc7253c365be79f206b7bc3f2b6\Windows10.0-KB
+5032196-x64.cab  :  619598326
+
+TimeThis :  Command Line :  fbf_python_windows.py C:\
+TimeThis :    Start Time :  Thu Nov 30 14:19:34 2023
+TimeThis :      End Time :  Thu Nov 30 14:20:24 2023
+TimeThis :  Elapsed Time :  00:00:50.015
+
+C:\labs>timethis fbf_python_windows.py C:\
+
+TimeThis :  Command Line :  fbf_python_windows.py C:\
+TimeThis :    Start Time :  Thu Nov 30 14:20:55 2023
+
+  289591 files examined
+ C:\ C:\Windows\SoftwareDistribution\Download\c8973bc7253c365be79f206b7bc3f2b6\Windows10.0-KB
+5032196-x64.cab  :  619598326
+
+TimeThis :  Command Line :  fbf_python_windows.py C:\
+TimeThis :    Start Time :  Thu Nov 30 14:20:55 2023
+TimeThis :      End Time :  Thu Nov 30 14:21:43 2023
+TimeThis :  Elapsed Time :  00:00:47.703
+
+C:\labs>copy fbf_python_windows.py s.py
+        1 file(s) copied.
+
+C:\labs>start notepad++ s.py
+
+C:\labs>vim advpython35.py
+
+C:\labs>start notepad++ advpython36.py
+
+C:\labs>advpython36.py
+Message from print_function
+Traceback (most recent call last):
+  File "C:\labs\advpython36.py", line 6, in <module>
+    import advpython35.py
+ModuleNotFoundError: No module named 'advpython35.py'; 'advpython35' is not a package
+
+C:\labs>advpython36.py
+Message from print_function
+
+C:\labs>advpython35.py
+Message from print_function
+
+C:\labs>advpython34.py
+Traceback (most recent call last):
+  File "C:\labs\advpython34.py", line 8, in <module>
+    func()
+  File "C:\labs\advpython34.py", line 6, in func
+    print_function()
+    ^^^^^^^^^^^^^^
+NameError: name 'print_function' is not defined
+
+C:\labs>curl -o advpython36.py www.laineed.com/advpython36_1.txt
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   867  100   867    0     0    867      0  0:00:01 --:--:--  0:00:01  1387
+
+C:\labs>REN advpython36_1.txt advpython36.py
+The system cannot find the file specified.
+
+C:\labs>curl -o advpython36.py www.laineed.com/advpython36_1.txt
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   867  100   867    0     0    867      0  0:00:01 --:--:--  0:00:01  3689
+
+C:\labs>python -c "from advpython36 import func;func()"
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "C:\labs\advpython36.py", line 24
+    <!-- browser does not support iframe's -->
+                                        ^
+SyntaxError: unterminated string literal (detected at line 24)
+
+C:\labs>python -c "from advpython36 import func;func()"
+Message from print_function
+
+C:\labs>advpython40.py 1
+3 4 False
+
+C:\labs>advpython40.py 2
+Traceback (most recent call last):
+  File "C:\labs\advpython40.py", line 11, in <module>
+    if sys.argv[1] == "2" : func(3,4,4)
+                            ^^^^^^^^^^^
+TypeError: func() takes 2 positional arguments but 3 were given
+
+C:\labs>advpython40.py 3
+3 4 True
+
+C:\labs>advpython41.py 1
+3 4 False
+
+C:\labs>advpython42.py 1
+3 4 () False
+
+C:\labs>advpython42.py 2
+3 4 (4,) False
+
+C:\labs>advpython42.py 3
+3 4 () True
+
+C:\labs>advpython42.py 4
+3 4 (5, 6, 7, 8) False
+
+C:\labs>
+C:\labs>advpython42.py 5
+3 4 (5, 6, 7) True
+
+C:\labs>start notepad++ advpython42.py
+
+C:\labs>copy advpython46.py advpythonlab10.py
+        1 file(s) copied.
+
+C:\labs>start notepad++ advpythonlab10.py
+
+C:\labs>copy \advpython\advsolutions\*lab10.py
+\advpython\advsolutions\advpythonlab10.py
+Overwrite C:\labs\advpythonlab10.py? (Yes/No/All): Y
+        1 file(s) copied.
+
+C:\labs>copy \advpython\advsolutions\*lab11.py
+\advpython\advsolutions\advpythonlab11.py
+        1 file(s) copied.
+
+C:\labs>advpythonlab11.py
+Sum of all the numbers:  499999500000
+function run time: 0.15624642372131348
+
+C:\labs>copy \advpython\advsolutions\*lab24.py
+\advpython\advsolutions\*lab24.py
+The system cannot find the file specified.
+        0 file(s) copied.
+
+C:\labs>copy \advpython\advsolutions\*lab24*.py
+\advpython\advsolutions\advpythonlab24a.py
+\advpython\advsolutions\advpythonlab24b.py
+        2 file(s) copied.
+
+C:\labs>advpythonlab24b.py
+Enter a date (mm dd yyyy):01 01 2000
+date:  01 01 2000  is/was a  Saturday
+
+C:\labs>
+C:\labs>advpythonlab24b.py
+Enter a date (mm dd yyyy):01 01 3000
+date:  01 01 3000  is/was a  Wednesday
+
+C:\labs>advpythonlab24b.py
+Enter a date (mm dd yyyy):12 01 1982
+date:  12 01 1982  is/was a  Wednesday
+
+C:\labs>advpythonlab24b.py
+Enter a date (mm dd yyyy):07 14 1975
+date:  07 14 1975  is/was a  Monday
+
+C:\labs>advpythonlab24b.py
+Enter a date (mm dd yyyy):03 28 1974
+date:  03 28 1974  is/was a  Thursday
+
+C:\labs>advpythonlab24b.py
+Enter a date (mm dd yyyy):04 21 1953
+date:  04 21 1953  is/was a  Tuesday
+
+C:\labs>advpythonlab24b.py
+Enter a date (mm dd yyyy):06 10 1971
+date:  06 10 1971  is/was a  Thursday
+
+C:\labs>advpythonlab24b.py
+Enter a date (mm dd yyyy):04 22 1953
+date:  04 22 1953  is/was a  Wednesday
+
+C:\labs>advpythonlab24b.py
+Enter a date (mm dd yyyy):07 01 1960
+date:  07 01 1960  is/was a  Friday
+
+C:\labs>advpythonlab24b.py
+Enter a date (mm dd yyyy):07 24 1983
+date:  07 24 1983  is/was a  Sunday
+
+C:\labs>advpythonlab24b.py
+Enter a date (mm dd yyyy):06 11 2021
+date:  06 11 2021  is/was a  Friday
+
+C:\labs>
+C:\labs>advpythonlab24b.py
+Enter a date (mm dd yyyy):10 11 2016
+date:  10 11 2016  is/was a  Tuesday
+
+C:\labs>dir *49*
+ Volume in drive C has no label.
+ Volume Serial Number is 60AE-64CF
+
+ Directory of C:\labs
+
+07/11/2023  12:08 PM               549 advpython63.py
+07/10/2023  01:17 PM               226 advpython27.py
+07/10/2023  09:12 PM               283 advpython51a.py
+11/30/2023  12:20 PM               492 advpythonlab6.py
+07/10/2023  08:43 PM               362 advpython49.py
+07/10/2023  08:44 PM               448 advpython49a.py
+               6 File(s)          2,360 bytes
+               0 Dir(s)  32,366,309,376 bytes free
+
+C:\labs>advpython49.py
+['Phil L', 39, 'big cheese']
+
+C:\labs>cat -n advpython49.py
+     1  #!/usr/bin/python3
+     2  #
+     3  # advpython49
+     4  #
+     5  class Employee :
+     6      def get_info(self) :
+     7          return [self.name,self.age,self.position]
+     8
+     9      def set_info(self,name,age,position) :
+    10          self.name=name
+    11          self.age=age
+    12          self.position=position
+    13
+    14  def func() :
+    15      emp = Employee()
+    16      emp.set_info("Phil L",39,"big cheese")
+    17      print(emp.get_info())
+    18
+    19  func()
+
+C:\labs>copy advpython50.py advpythonlab12a.py
+        1 file(s) copied.
+
+C:\labs>start notepad++ advpythonlab12a.py
+
+C:\labs>advpythonlab12a.py
+['Phil L', '39', 'big cheese']
+Colleen L, 39, bigger cheese
+
+C:\labs>advpythonlab12a.py
+['Phil L', '40', 'CEO']
+Colleen L, 40, COO
+
+C:\labs>copy advpython12a.py advpythonlab13a.py
+The system cannot find the file specified.
+
+C:\labs>copy advpython12a.py advpythonlab13a.py
+The system cannot find the file specified.
+
+C:\labs>copy advpython12a.py advpythonlab13a.py
+The system cannot find the file specified.
+
+C:\labs>copy advpython12a.py lab13.py
+The system cannot find the file specified.
+
+C:\labs>start notepad++ advpythonlab13a.py
+
+C:\labs>advpythonlab13a.py
+['Phil L', '40', 'CEO']
+Colleen L, 40, COO
+Object Phil L is going out of scope
+Object Colleen L is going out of scope
+
+C:\labs>advpythonlab13a.py
+['Phil L', '40', 'CEO']
+Colleen L, 40, COO
+Object Colleen L is going out of scope
+Object Phil L is going out of scope
+
+C:\labs>pip3 install requests
+Collecting requests
+  Downloading requests-2.31.0-py3-none-any.whl (62 kB)
+     ---------------------------------------- 62.6/62.6 kB 3.3 MB/s eta 0:00:00
+Collecting charset-normalizer<4,>=2 (from requests)
+  Downloading charset_normalizer-3.3.2-cp311-cp311-win_amd64.whl (99 kB)
+     ---------------------------------------- 99.9/99.9 kB 5.6 MB/s eta 0:00:00
+Collecting idna<4,>=2.5 (from requests)
+  Downloading idna-3.6-py3-none-any.whl (61 kB)
+     ---------------------------------------- 61.6/61.6 kB 3.4 MB/s eta 0:00:00
+Collecting urllib3<3,>=1.21.1 (from requests)
+  Downloading urllib3-2.1.0-py3-none-any.whl (104 kB)
+     ---------------------------------------- 104.6/104.6 kB ? eta 0:00:00
+Collecting certifi>=2017.4.17 (from requests)
+  Downloading certifi-2023.11.17-py3-none-any.whl (162 kB)
+     ---------------------------------------- 162.5/162.5 kB 10.2 MB/s eta 0:00:00
+Installing collected packages: urllib3, idna, charset-normalizer, certifi, requests
+Successfully installed certifi-2023.11.17 charset-normalizer-3.3.2 idna-3.6 requests-2.31.0 urllib3-2.1.0
+
+[notice] A new release of pip is available: 23.1.2 -> 23.3.1
+[notice] To update, run: python.exe -m pip install --upgrade pip
+
+C:\labs>python -qi
+>>> url = "https://jsonplaceholder.typicode.com/todos/1"
+>>> import requests
+>>> data = requests.get(url)
+>>> data.json()
+{'userId': 1, 'id': 1, 'title': 'delectus aut autem', 'completed': False}
+>>> data.status_code
+200
+>>> url2 = "https://agi.github.com/search/rrepositories?q=language:python&sort=stars"
+>>> headers = {"Accept": "application/vnd.github.v3+json"}
+>>> r = requests.get(url2, headers=headers)
+>>> r.json()
+Traceback (most recent call last):
+  File "C:\Python311\Lib\site-packages\requests\models.py", line 971, in json
+    return complexjson.loads(self.text, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "C:\Python311\Lib\site-packages\requests\models.py", line 975, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+>>> copt \advpython\advsamples\first.py
+  File "<stdin>", line 1
+    copt \advpython\advsamples\first.py
+          ^
+SyntaxError: unexpected character after line continuation character
+>>> copy \advpython\advsamples\first.py
+  File "<stdin>", line 1
+    copy \advpython\advsamples\first.py
+          ^
+SyntaxError: unexpected character after line continuation character
+>>> quit()
+
+C:\labs>copy \advpython\advsamples\first.py
+        1 file(s) copied.
+
+C:\labs>copy \advpython\advsamples\second.py
+        1 file(s) copied.
+
+C:\labs>copy \advpython\advsamples\third.py
+        1 file(s) copied.
+
+C:\labs>copy \advpython\advsamples\fourth.py
+        1 file(s) copied.
+
+C:\labs>python -c "import flask"
+
+C:\labs>first.py
+ * Serving Flask app 'first'
+ * Debug mode: on
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5000
+Press CTRL+C to quit
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 137-727-640
+
+C:\labs>
+
+C:\labs>second.py
+ * Serving Flask app 'second'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5000
+Press CTRL+C to quit
+127.0.0.1 - - [01/Dec/2023 11:10:32] "GET /students HTTP/1.1" 200 -
+
+C:\labs>pip3 install jsonify
+Requirement already satisfied: jsonify in c:\python311\lib\site-packages (0.5)
+
+[notice] A new release of pip is available: 23.1.2 -> 23.3.1
+[notice] To update, run: python.exe -m pip install --upgrade pip
+
+C:\labs>fourth.py
+ * Serving Flask app 'fourth'
+ * Debug mode: on
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5000
+Press CTRL+C to quit
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 137-727-640
+127.0.0.1 - - [01/Dec/2023 11:17:02] "GET /todo/api/v1.0/tasks HTTP/1.1" 404 -
+
+C:\labs>
+
+C:\labs>pydoc3 pickle
+Help on module pickle:
+
+NAME
+    pickle - Create portable serialized representations of Python objects.
+
+MODULE REFERENCE
+    https://docs.python.org/3.11/library/pickle.html
+
+    The following documentation is automatically generated from the Python
+    source files.  It may be incomplete, incorrect or include features that
+    are considered implementation detail and may vary between Python
+    implementations.  When in doubt, consult the module reference at the
+    location listed above.
+
+DESCRIPTION
+    See module copyreg for a mechanism for registering custom picklers.
+    See module pickletools source for extensive comments.
+
+    Classes:
+
+        Pickler
+        Unpickler
+
+    Functions:
+
+        dump(object, file)
+        dumps(object) -> string
+        load(file) -> object
+        loads(bytes) -> object
+
+    Misc variables:
+
+        __version__
+        format_version
+        compatible_formats
+
+CLASSES
+    builtins.Exception(builtins.BaseException)
+        _pickle.PickleError
+            _pickle.PicklingError
+            _pickle.UnpicklingError
+    builtins.object
+        _pickle.Pickler
+        _pickle.Unpickler
+        PickleBuffer
+
+    class PickleBuffer(builtins.object)
+     |  Wrapper for potentially out-of-band buffers
+     |
+     |  Methods defined here:
+     |
+     |  raw(self, /)
+     |      Return a memoryview of the raw memory underlying this buffer.
+     |      Will raise BufferError is the buffer isn't contiguous.
+     |
+     |  release(self, /)
+     |      Release the underlying buffer exposed by the PickleBuffer object.
+     |
+     |  ----------------------------------------------------------------------
+     |  Static methods defined here:
+     |
+     |  __new__(*args, **kwargs) from builtins.type
+     |      Create and return a new object.  See help(type) for accurate signature.
+
+    class PickleError(builtins.Exception)
+     |  Method resolution order:
+     |      PickleError
+
+
+C:\labs>
+C:\labs>pydoc3 pickle.dump
+Help on built-in function dump in pickle:
+
+pickle.dump = dump(obj, file, protocol=None, *, fix_imports=True, buffer_callback=None)
+    Write a pickled representation of obj to the open file object file.
+
+    This is equivalent to ``Pickler(file, protocol).dump(obj)``, but may
+    be more efficient.
+
+    The optional *protocol* argument tells the pickler to use the given
+    protocol; supported protocols are 0, 1, 2, 3, 4 and 5.  The default
+    protocol is 4. It was introduced in Python 3.4, and is incompatible
+    with previous versions.
+
+    Specifying a negative protocol version selects the highest protocol
+    version supported.  The higher the protocol used, the more recent the
+    version of Python needed to read the pickle produced.
+
+    The *file* argument must have a write() method that accepts a single
+    bytes argument.  It can thus be a file object opened for binary
+    writing, an io.BytesIO instance, or any other custom object that meets
+    this interface.
+
+
+
+C:\labs>copy \advpython\advsamples\advpython5?.py
+\advpython\advsamples\advpython5.py
+Overwrite C:\labs\advpython5.py? (Yes/No/All): N
+\advpython\advsamples\advpython50.py
+Overwrite C:\labs\advpython50.py? (Yes/No/All): Y
+\advpython\advsamples\advpython51.py
+Overwrite C:\labs\advpython51.py? (Yes/No/All): Y
+\advpython\advsamples\advpython52.py
+Overwrite C:\labs\advpython52.py? (Yes/No/All): Y
+\advpython\advsamples\advpython53.py
+Overwrite C:\labs\advpython53.py? (Yes/No/All): Y
+\advpython\advsamples\advpython54.py
+Overwrite C:\labs\advpython54.py? (Yes/No/All): Y
+\advpython\advsamples\advpython56.py
+Overwrite C:\labs\advpython56.py? (Yes/No/All): Y
+\advpython\advsamples\advpython58.py
+Overwrite C:\labs\advpython58.py? (Yes/No/All): Y
+\advpython\advsamples\advpython59.py
+Overwrite C:\labs\advpython59.py? (Yes/No/All): Y
+        8 file(s) copied.
+
+C:\labs>start notepad++ advpython52.py
+
+C:\labs>advpython52.py
+[[2, 4, 6], [8, 10, 12], [14, 16, 18]]
+[8, 10, 12]
+8
+
+C:\labs>dir st*
+ Volume in drive C has no label.
+ Volume Serial Number is 60AE-64CF
+
+ Directory of C:\labs
+
+12/01/2023  11:52 AM                46 stored.data
+               1 File(s)             46 bytes
+               0 Dir(s)  32,501,903,360 bytes free
+
+C:\labs>cat -v stored.data
+M-^@^DM-^U#^@^@^@^@^@^@^@]M-^T(]M-^T(K^BK^DK^Fe]M-^T(K^HK
+K^Le]M-^T(K^NK^PK^Ree.
+C:\labs>advpython53.py
+[[2, 4, 6], [8, 10, 12], [14, 16, 18]]
+[8, 10, 12]
+8
+
+C:\labs>start notepad++ advpython53.py
+
+C:\labs>pydoc3 pickle.dumps
+Help on built-in function dumps in pickle:
+
+pickle.dumps = dumps(obj, protocol=None, *, fix_imports=True, buffer_callback=None)
+    Return the pickled representation of the object as a bytes object.
+
+    The optional *protocol* argument tells the pickler to use the given
+    protocol; supported protocols are 0, 1, 2, 3, 4 and 5.  The default
+    protocol is 4. It was introduced in Python 3.4, and is incompatible
+    with previous versions.
+
+    Specifying a negative protocol version selects the highest protocol
+    version supported.  The higher the protocol used, the more recent the
+    version of Python needed to read the pickle produced.
+
+    If *fix_imports* is True and *protocol* is less than 3, pickle will
+    try to map the new Python 3 names to the old module names used in
+    Python 2, so that the pickle data stream is readable with Python 2.
+
+    If *buffer_callback* is None (the default), buffer views are serialized
+    into *file* as part of the pickle stream.  It is an error if
+    *buffer_callback* is not None and *protocol* is None or smaller than 5.
+
+
+C:\labs>pydoc3 pickle.loads
+Help on built-in function loads in pickle:
+
+pickle.loads = loads(data, /, *, fix_imports=True, encoding='ASCII', errors='strict', buffers=())
+    Read and return an object from the given pickle data.
+
+    The protocol version of the pickle is detected automatically, so no
+    protocol argument is needed.  Bytes past the pickled object's
+    representation are ignored.
+
+    Optional keyword arguments are *fix_imports*, *encoding* and *errors*,
+    which are used to control compatibility support for pickle stream
+    generated by Python 2.  If *fix_imports* is True, pickle will try to
+    map the old Python 2 names to the new names used in Python 3.  The
+    *encoding* and *errors* tell pickle how to decode 8-bit string
+    instances pickled by Python 2; these default to 'ASCII' and 'strict',
+    respectively.  The *encoding* can be 'bytes' to read these 8-bit
+    string instances as bytes objects.
+
+
+C:\labs>advpython52a.py
+  File "C:\labs\advpython52a.py", line 18
+    pickle.loads(data)
+TabError: inconsistent use of tabs and spaces in indentation
+
+C:\labs>REN advpython52a.py advpythonlab15.py
+
+C:\labs>advpythonlab15.py
+[[2, 4, 6], [8, 10, 12], [14, 16, 18]]
+[8, 10, 12]
+8
+Traceback (most recent call last):
+  File "C:\labs\advpythonlab15.py", line 21, in <module>
+    store()
+  File "C:\labs\advpythonlab15.py", line 17, in store
+    data = pickle.dumps(lists,file)
+                              ^^^^
+NameError: name 'file' is not defined. Did you mean: 'filter'?
+
+C:\labs>start notepad++ advpythonlab15.py
+
+C:\labs>advpythonlab15.py
+[[2, 4, 6], [8, 10, 12], [14, 16, 18]]
+[8, 10, 12]
+8
+Traceback (most recent call last):
+  File "C:\labs\advpythonlab15.py", line 21, in <module>
+    store()
+  File "C:\labs\advpythonlab15.py", line 19, in store
+    file.close()
+    ^^^^
+NameError: name 'file' is not defined. Did you mean: 'filter'?
+
+C:\labs>advpythonlab15.py
+[[2, 4, 6], [8, 10, 12], [14, 16, 18]]
+[8, 10, 12]
+8
+
+C:\labs>advpythonlab15.py
+[[2, 4, 6], [8, 10, 12], [14, 16, 18]]
+[8, 10, 12]
+8
+[[2, 4, 6], [8, 10, 12], [14, 16, 18]]
+
+C:\labs>advpythonlab15.py
+[[2, 4, 6], [8, 10, 12], [14, 16, 18]]
+[8, 10, 12]
+8
+<class 'bytes'>
+[[2, 4, 6], [8, 10, 12], [14, 16, 18]]
+
+C:\labs>advpythonlab15.py
+[[2, 4, 6], [8, 10, 12], [14, 16, 18]]
+[8, 10, 12]
+8
+<class 'bytes'>
+[[2, 4, 6], [8, 10, 12], [14, 16, 18]]
+<class 'list'>
+
+C:\labs>path
+PATH=C:\Python311\Scripts\;C:\Python311\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Python311\tools\scripts;C:\Program Files\MariaDB 11.1\bin;C:\Users\ansadm\AppData\Local\Microsoft\WindowsApps;
+
+C:\labs>netstat -ano | find "3306"
+  TCP    0.0.0.0:3306           0.0.0.0:0              LISTENING       3108
+  TCP    [::]:3306              [::]:0                 LISTENING       3108
+
+C:\labs>services.msc
+
+C:\labs>mysql -r root -p
+Enter password: ****
+ERROR 1045 (28000): Access denied for user 'ansadm'@'localhost' (using password: YES)
+
+C:\labs>mysql -u root -p
+Enter password: ****
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 4
+Server version: 11.1.3-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> use class;
+ERROR 1049 (42000): Unknown database 'class'
+MariaDB [(none)]> create database class;
+Query OK, 1 row affected (0.004 sec)
+
+MariaDB [(none)]> use class;
+Database changed
+MariaDB [class]> show databases;
++--------------------+
+| Database           |
++--------------------+
+| class              |
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+5 rows in set (0.031 sec)
+
+MariaDB [class]> \!
+ERROR: Usage: \! shell-command
+MariaDB [class]> source /advpython/advsamples/carbld_mysql.sql
+Database changed
+Query OK, 0 rows affected (0.040 sec)
+
+Query OK, 1 row affected (0.066 sec)
+
+Query OK, 1 row affected (0.001 sec)
+
+Query OK, 1 row affected (0.000 sec)
+
+Query OK, 1 row affected (0.001 sec)
+
+Query OK, 1 row affected (0.000 sec)
+
+Query OK, 1 row affected (0.001 sec)
+
+Query OK, 1 row affected (0.000 sec)
+
+Query OK, 1 row affected (0.002 sec)
+
+Query OK, 1 row affected (0.001 sec)
+
+Query OK, 1 row affected (0.001 sec)
+
+Query OK, 1 row affected (0.001 sec)
+
+Query OK, 1 row affected (0.000 sec)
+
+Query OK, 0 rows affected (0.000 sec)
+
+MariaDB [class]> show tables;
++-----------------+
+| Tables_in_class |
++-----------------+
+| cars            |
++-----------------+
+1 row in set (0.004 sec)
+
+MariaDB [class]> select * from cars;
++--------+---------+------+-------+----------+
+| MAKE   | MODEL   | YEAR | MILES | VALUE    |
++--------+---------+------+-------+----------+
+| plym   | fury    |   77 |    73 |  2500.00 |
+| chevy  | nova    |   79 |    60 |  3000.00 |
+| ford   | mustang |   65 |    45 | 10000.00 |
+| volvo  | gl      |   78 |   102 |  9850.00 |
+| ford   | ltd     |   83 |    15 | 10500.00 |
+| chevy  | nova    |   80 |    50 |  3500.00 |
+| fiat   | 600     |   65 |   115 |   450.00 |
+| honda  | accord  |   81 |    30 |  6000.00 |
+| ford   | thundbd |   84 |    10 | 17000.00 |
+| toyota | tercel  |   82 |   180 |   750.00 |
+| chevy  | impala  |   65 |    85 |  1550.00 |
+| ford   | bronco  |   83 |    25 |  9500.00 |
++--------+---------+------+-------+----------+
+12 rows in set (0.001 sec)
+
+MariaDB [class]> quit;
+Bye
+
+C:\labs>start notepad++ \advpython\advsamples\carbld_mysql.sql
+
+C:\labs>find/i "use"  \advpython\advsamples\carbld_mysql.sql
+
+---------- \ADVPYTHON\ADVSAMPLES\CARBLD_MYSQL.SQL
+--   It should be STARTed by each user wishing to access the tables.
+USE vanguard1;
+
+C:\labs>mysql -u root -p
+Enter password: ****
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 5
+Server version: 11.1.3-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> use vanguard1;
+ERROR 1049 (42000): Unknown database 'vanguard1'
+MariaDB [(none)]> source /advpython/advsamples/carbld_mysql.sql
+ERROR 1049 (42000) at line 7 in file: '\advpython\advsamples\carbld_mysql.sql': Unknown database 'vanguard1'
+ERROR 1046 (3D000) at line 9 in file: '\advpython\advsamples\carbld_mysql.sql': No database selected
+ERROR 1046 (3D000) at line 16 in file: '\advpython\advsamples\carbld_mysql.sql': No database selected
+ERROR 1046 (3D000) at line 18 in file: '\advpython\advsamples\carbld_mysql.sql': No database selected
+ERROR 1046 (3D000) at line 20 in file: '\advpython\advsamples\carbld_mysql.sql': No database selected
+ERROR 1046 (3D000) at line 22 in file: '\advpython\advsamples\carbld_mysql.sql': No database selected
+ERROR 1046 (3D000) at line 24 in file: '\advpython\advsamples\carbld_mysql.sql': No database selected
+ERROR 1046 (3D000) at line 26 in file: '\advpython\advsamples\carbld_mysql.sql': No database selected
+ERROR 1046 (3D000) at line 28 in file: '\advpython\advsamples\carbld_mysql.sql': No database selected
+ERROR 1046 (3D000) at line 30 in file: '\advpython\advsamples\carbld_mysql.sql': No database selected
+ERROR 1046 (3D000) at line 32 in file: '\advpython\advsamples\carbld_mysql.sql': No database selected
+ERROR 1046 (3D000) at line 34 in file: '\advpython\advsamples\carbld_mysql.sql': No database selected
+ERROR 1046 (3D000) at line 36 in file: '\advpython\advsamples\carbld_mysql.sql': No database selected
+ERROR 1046 (3D000) at line 38 in file: '\advpython\advsamples\carbld_mysql.sql': No database selected
+Query OK, 0 rows affected (0.000 sec)
+
+MariaDB [(none)]> show databases;
++--------------------+
+| Database           |
++--------------------+
+| class              |
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+5 rows in set (0.001 sec)
+
+MariaDB [(none)]> use class;
+Database changed
+MariaDB [class]> show databases;
++--------------------+
+| Database           |
++--------------------+
+| class              |
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+5 rows in set (0.001 sec)
+
+MariaDB [class]> source /advpython/advsamples/carbld_mysql.sql
+ERROR 1049 (42000) at line 7 in file: '\advpython\advsamples\carbld_mysql.sql': Unknown database 'vanguard1'
+ERROR 1050 (42S01) at line 9 in file: '\advpython\advsamples\carbld_mysql.sql': Table 'cars' already exists
+Query OK, 1 row affected (0.001 sec)
+
+Query OK, 1 row affected (0.001 sec)
+
+Query OK, 1 row affected (0.000 sec)
+
+Query OK, 1 row affected (0.001 sec)
+
+Query OK, 1 row affected (0.000 sec)
+
+Query OK, 1 row affected (0.001 sec)
+
+Query OK, 1 row affected (0.001 sec)
+
+Query OK, 1 row affected (0.000 sec)
+
+Query OK, 1 row affected (0.001 sec)
+
+Query OK, 1 row affected (0.000 sec)
+
+Query OK, 1 row affected (0.001 sec)
+
+Query OK, 1 row affected (0.000 sec)
+
+Query OK, 0 rows affected (0.000 sec)
+
+MariaDB [class]> show tables;
++-----------------+
+| Tables_in_class |
++-----------------+
+| cars            |
++-----------------+
+1 row in set (0.001 sec)
+
+MariaDB [class]> select * from cars;
++--------+---------+------+-------+----------+
+| MAKE   | MODEL   | YEAR | MILES | VALUE    |
++--------+---------+------+-------+----------+
+| plym   | fury    |   77 |    73 |  2500.00 |
+| chevy  | nova    |   79 |    60 |  3000.00 |
+| ford   | mustang |   65 |    45 | 10000.00 |
+| volvo  | gl      |   78 |   102 |  9850.00 |
+| ford   | ltd     |   83 |    15 | 10500.00 |
+| chevy  | nova    |   80 |    50 |  3500.00 |
+| fiat   | 600     |   65 |   115 |   450.00 |
+| honda  | accord  |   81 |    30 |  6000.00 |
+| ford   | thundbd |   84 |    10 | 17000.00 |
+| toyota | tercel  |   82 |   180 |   750.00 |
+| chevy  | impala  |   65 |    85 |  1550.00 |
+| ford   | bronco  |   83 |    25 |  9500.00 |
+| plym   | fury    |   77 |    73 |  2500.00 |
+| chevy  | nova    |   79 |    60 |  3000.00 |
+| ford   | mustang |   65 |    45 | 10000.00 |
+| volvo  | gl      |   78 |   102 |  9850.00 |
+| ford   | ltd     |   83 |    15 | 10500.00 |
+| chevy  | nova    |   80 |    50 |  3500.00 |
+| fiat   | 600     |   65 |   115 |   450.00 |
+| honda  | accord  |   81 |    30 |  6000.00 |
+| ford   | thundbd |   84 |    10 | 17000.00 |
+| toyota | tercel  |   82 |   180 |   750.00 |
+| chevy  | impala  |   65 |    85 |  1550.00 |
+| ford   | bronco  |   83 |    25 |  9500.00 |
++--------+---------+------+-------+----------+
+24 rows in set (0.001 sec)
+
+MariaDB [class]> create vanguard1
+    -> quit
+    -> show databases
+    -> quit()
+    -> quit;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'vanguard1
+quit
+show databases
+quit()
+quit' at line 1
+MariaDB [class]> quit;
+Bye
+
+C:\labs>mysql -u root -p
+Enter password: ****
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 6
+Server version: 11.1.3-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> show databases;
++--------------------+
+| Database           |
++--------------------+
+| class              |
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+5 rows in set (0.001 sec)
+
+MariaDB [(none)]> create database vanguard1;
+Query OK, 1 row affected (0.001 sec)
+
+MariaDB [(none)]> show databases;
++--------------------+
+| Database           |
++--------------------+
+| class              |
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
+| vanguard1          |
++--------------------+
+6 rows in set (0.001 sec)
+
+MariaDB [(none)]> use vanguard1;
+Database changed
+MariaDB [vanguard1]> source /advpython/advsamples/carbld_mysql.sql;
+Database changed
+Query OK, 0 rows affected (0.006 sec)
+
+Query OK, 1 row affected (0.015 sec)
+
+Query OK, 1 row affected (0.001 sec)
+
+Query OK, 1 row affected (0.001 sec)
+
+Query OK, 1 row affected (0.001 sec)
+
+Query OK, 1 row affected (0.001 sec)
+
+Query OK, 1 row affected (0.000 sec)
+
+Query OK, 1 row affected (0.001 sec)
+
+Query OK, 1 row affected (0.000 sec)
+
+Query OK, 1 row affected (0.001 sec)
+
+Query OK, 1 row affected (0.000 sec)
+
+Query OK, 1 row affected (0.001 sec)
+
+Query OK, 1 row affected (0.001 sec)
+
+Query OK, 0 rows affected (0.000 sec)
+
+MariaDB [vanguard1]> desc cars;
++-------+--------------+------+-----+---------+-------+
+| Field | Type         | Null | Key | Default | Extra |
++-------+--------------+------+-----+---------+-------+
+| MAKE  | char(10)     | NO   |     | NULL    |       |
+| MODEL | char(10)     | NO   |     | NULL    |       |
+| YEAR  | int(11)      | YES  |     | NULL    |       |
+| MILES | int(11)      | YES  |     | NULL    |       |
+| VALUE | decimal(9,2) | YES  |     | NULL    |       |
++-------+--------------+------+-----+---------+-------+
+5 rows in set (0.030 sec)
+
+MariaDB [vanguard1]> show tables;
++---------------------+
+| Tables_in_vanguard1 |
++---------------------+
+| cars                |
++---------------------+
+1 row in set (0.001 sec)
+
+MariaDB [vanguard1]> select * from cars;
++--------+---------+------+-------+----------+
+| MAKE   | MODEL   | YEAR | MILES | VALUE    |
++--------+---------+------+-------+----------+
+| plym   | fury    |   77 |    73 |  2500.00 |
+| chevy  | nova    |   79 |    60 |  3000.00 |
+| ford   | mustang |   65 |    45 | 10000.00 |
+| volvo  | gl      |   78 |   102 |  9850.00 |
+| ford   | ltd     |   83 |    15 | 10500.00 |
+| chevy  | nova    |   80 |    50 |  3500.00 |
+| fiat   | 600     |   65 |   115 |   450.00 |
+| honda  | accord  |   81 |    30 |  6000.00 |
+| ford   | thundbd |   84 |    10 | 17000.00 |
+| toyota | tercel  |   82 |   180 |   750.00 |
+| chevy  | impala  |   65 |    85 |  1550.00 |
+| ford   | bronco  |   83 |    25 |  9500.00 |
++--------+---------+------+-------+----------+
+12 rows in set (0.000 sec)
+
+MariaDB [vanguard1]> select * from care where make="chevy";
+ERROR 1146 (42S02): Table 'vanguard1.care' doesn't exist
+MariaDB [vanguard1]> select * from car where make="chevy";
+ERROR 1146 (42S02): Table 'vanguard1.car' doesn't exist
+MariaDB [vanguard1]> select * from cars where make="chevy";
++-------+--------+------+-------+---------+
+| MAKE  | MODEL  | YEAR | MILES | VALUE   |
++-------+--------+------+-------+---------+
+| chevy | nova   |   79 |    60 | 3000.00 |
+| chevy | nova   |   80 |    50 | 3500.00 |
+| chevy | impala |   65 |    85 | 1550.00 |
++-------+--------+------+-------+---------+
+3 rows in set (0.003 sec)
+
+MariaDB [vanguard1]> quit;
+Bye
+
+C:\labs>mysql -u root -p
+Enter password: ****
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 7
+Server version: 11.1.3-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> use vanguard1;
+Database changed
+MariaDB [vanguard1]> show tables;
++---------------------+
+| Tables_in_vanguard1 |
++---------------------+
+| cars                |
++---------------------+
+1 row in set (0.001 sec)
+
+MariaDB [vanguard1]> quit;
+Bye
+
+C:\labs>copy \advpython\advsamples\db_access.py
+        1 file(s) copied.
+
+C:\labs>copy \advpython\advsamples\window*py
+\advpython\advsamples\window1.py
+\advpython\advsamples\window2.py
+\advpython\advsamples\window3.py
+\advpython\advsamples\window3_desktop.py
+\advpython\advsamples\window4.py
+        5 file(s) copied.
+
+C:\labs>python window3.py
+
+C:\labs>start notepad++ window3.py
+
+C:\labs>python window3.py
+
+C:\labs>python window3_desktop.py
+  File "C:\labs\window3_desktop.py", line 1
+    c:\python311\python.exe  c:\advpython\advsamples\window3.py
+       ^
+SyntaxError: unexpected character after line continuation character
+
+C:\labs>copy \advpython\advsamples\window3_desktop.bat
+        1 file(s) copied.
+
+C:\labs>pydoc3 unittest
+Help on package unittest:
+
+NAME
+    unittest
+
+MODULE REFERENCE
+    https://docs.python.org/3.11/library/unittest.html
+
+    The following documentation is automatically generated from the Python
+    source files.  It may be incomplete, incorrect or include features that
+    are considered implementation detail and may vary between Python
+    implementations.  When in doubt, consult the module reference at the
+    location listed above.
+
+DESCRIPTION
+    Python unit testing framework, based on Erich Gamma's JUnit and Kent Beck's
+    Smalltalk testing framework (used with permission).
+
+    This module contains the core framework classes that form the basis of
+    specific test cases and suites (TestCase, TestSuite etc.), and also a
+    text-based utility class for running the tests and reporting the results
+     (TextTestRunner).
+
+    Simple usage:
+
+        import unittest
+
+        class IntegerArithmeticTestCase(unittest.TestCase):
+            def testAdd(self):  # test method names begin with 'test'
+                self.assertEqual((1 + 2), 3)
+
+
+C:\labs>copy \advpython\advsamples\calc2.py
+        1 file(s) copied.
+
+C:\labs>copy \advpython\advsamples\unittest1.py
+        1 file(s) copied.
+
+C:\labs>pydoc3 unittest.TestCase
+Help on class TestCase in unittest:
+
+unittest.TestCase = class TestCase(builtins.object)
+ |  unittest.TestCase(methodName='runTest')
+ |
+ |  A class whose instances are single test cases.
+ |
+ |  By default, the test code itself should be placed in a method named
+ |  'runTest'.
+ |
+ |  If the fixture may be used for many test cases, create as
+ |  many test methods as are needed. When instantiating such a TestCase
+ |  subclass, specify in the constructor arguments the name of the test method
+ |  that the instance is to execute.
+ |
+ |  Test authors should subclass TestCase for their own tests. Construction
+ |  and deconstruction of the test's environment ('fixture') can be
+ |  implemented by overriding the 'setUp' and 'tearDown' methods respectively.
+ |
+ |  If it is necessary to override the __init__ method, the base class
+ |  __init__ method must always be called. It is important that subclasses
+ |  should not change the signature of their __init__ method, since instances
+ |  of the classes are instantiated automatically by parts of the framework
+ |  in order to be run.
+ |
+ |  When subclassing TestCase, you can set these attributes:
+ |  * failureException: determines which exception will be raised when
+ |      the instance's assertion methods fail; test methods raising this
+ |      exception will be deemed to have 'failed' rather than 'errored'.
+ |  * longMessage: determines whether long messages (including repr of
+ |      objects used in assert methods) will be printed on failure in *addition*
+ |      to any explicit message passed.
+
+
+C:\labs>unittest1.py
+..
+----------------------------------------------------------------------
+Ran 2 tests in 0.000s
+
+OK
+
+C:\labs>start notepad++ unittest1.py
+
+C:\labs>unittest1.py
+.F
+======================================================================
+FAIL: test_ctn_2 (__main__.TestUT.test_ctn_2)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\labs\unittest1.py", line 17, in test_ctn_2
+    self.assertEqual(ctn(6),22)
+AssertionError: 21 != 22
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.001s
+
+FAILED (failures=1)
+
+C:\labs>pydoc3 distutils.core.setup
+Help on function setup in distutils.core:
+
+distutils.core.setup = setup(**attrs)
+    The gateway to the Distutils: do everything your setup script needs
+    to do, in a highly flexible and user-driven way.  Briefly: create a
+    Distribution instance; find and parse config files; parse the command
+    line; run each Distutils command found there, customized by the options
+    supplied to 'setup()' (as keyword arguments), in config files, and on
+    the command line.
+
+    The Distribution instance might be an instance of a class supplied via
+    the 'distclass' keyword argument to 'setup'; if no such class is
+    supplied, then the Distribution class (in dist.py) is instantiated.
+    All other arguments to 'setup' (except for 'cmdclass') are used to set
+    attributes of the Distribution instance.
+
+    The 'cmdclass' argument, if supplied, is a dictionary mapping command
+    names to command classes.  Each command encountered on the command line
+    will be turned into a command class, which is in turn instantiated; any
+    class found in 'cmdclass' is used in place of the default, which is
+    (for command 'foo_bar') class 'foo_bar' in module
+    'distutils.command.foo_bar'.  The command class must provide a
+    'user_options' attribute which is a list of option specifiers for
+    'distutils.fancy_getopt'.  Any command-line options between the current
+    and the next command are used to set attributes of the current command
+    object.
+
+    When the entire command-line has been successfully parsed, calls the
+    'run()' method on each command object in turn.  This method will be
+    driven entirely by the Distribution object (which each command object
+    has a reference to, thanks to its constructor), and the
+    command-specific options that became attributes of each command
+
+
+C:\labs>
+C:\labs>copy \advpython\advsamples\calc_tri_number-1.0.win-amd64.exe
+        1 file(s) copied.
+
+C:\labs>dir calc*
+ Volume in drive C has no label.
+ Volume Serial Number is 60AE-64CF
+
+ Directory of C:\labs
+
+10/02/2017  10:46 AM               183 calc2.py
+05/22/2017  04:04 PM           589,732 calc_tri_number-1.0.win-amd64.exe
+               2 File(s)        589,915 bytes
+               0 Dir(s)  32,602,411,008 bytes free
+
+C:\labs>calc_tri_number-1.0.win-amd64.exe
+
+C:\labs>dir \python311\Lib\site-packages\mycalc
+ Volume in drive C has no label.
+ Volume Serial Number is 60AE-64CF
+
+ Directory of C:\python311\Lib\site-packages\mycalc
+
+12/01/2023  03:29 PM    <DIR>          .
+12/01/2023  03:29 PM    <DIR>          ..
+04/13/2017  05:53 AM               224 calc.py
+05/22/2017  09:00 AM               195 setup.py
+05/22/2017  08:21 AM                 0 __init__.py
+12/01/2023  03:29 PM    <DIR>          __pycache__
+               3 File(s)            419 bytes
+               3 Dir(s)  32,601,722,880 bytes free
+
+C:\labs>python -c "import mycalc.calc as calc"
+
+C:\labs>python -c "from mycalc.calc import calc_tri_number as calc"
+
+C:\labs>python -c "from mycalc.calc import calc_tri_number as calc;calc(6)"
+For 6 the triangular number is 21
+
+C:\labs>start notepad++ pythonlab39.py
+
+C:\labs>start notepad++ pythonlab39.py
+
+C:\labs>python setup.py --help
+
+C:\labs>python setup.py --help
+  File "C:\labs\setup.py", line 9
+    )
+    ^
+SyntaxError: positional argument follows keyword argument
+
+C:\labs>python setup.py --help
+  File "C:\labs\setup.py", line 9
+    )
+    ^
+SyntaxError: positional argument follows keyword argument
+
+C:\labs>python setup.py --help
+  File "C:\labs\setup.py", line 9
+    )
+    ^
+SyntaxError: positional argument follows keyword argument
+
+C:\labs>mkdir mycalc
+
+C:\labs>cd mycalc
+
+C:\labs\mycalc>copy \advpython\advsamples\calc.py
+        1 file(s) copied.
+
+C:\labs\mycalc>copy ..\setup.py
+        1 file(s) copied.
+
+C:\labs\mycalc>copy nul __init__.py
+        1 file(s) copied.
+
+C:\labs\mycalc>dir
+ Volume in drive C has no label.
+ Volume Serial Number is 60AE-64CF
+
+ Directory of C:\labs\mycalc
+
+12/01/2023  03:44 PM    <DIR>          .
+12/01/2023  03:44 PM    <DIR>          ..
+09/30/2017  10:05 AM               243 calc.py
+12/01/2023  03:36 PM               139 setup.py
+12/01/2023  03:44 PM                 0 __init__.py
+               3 File(s)            382 bytes
+               2 Dir(s)  32,599,326,720 bytes free
+
+C:\labs\mycalc>cd ..
+
+C:\labs>dir dist
+ Volume in drive C has no label.
+ Volume Serial Number is 60AE-64CF
+
+ Directory of C:\labs
+
+File Not Found
+
+C:\labs>python setup.py bddist_wininst
+  File "C:\labs\setup.py", line 9
+    )
+    ^
+SyntaxError: positional argument follows keyword argument
+
+C:\labs>copy ..\setup.py
+The system cannot find the file specified.
+
+C:\labs>
